@@ -1,5 +1,5 @@
 'use strict'
-import 'core-js/modules/es.array.iterator';
+require('core-js/modules/es.array.iterator');
 
 
 const log = require('fancy-log')
