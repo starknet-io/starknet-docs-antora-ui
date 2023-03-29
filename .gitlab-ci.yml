@@ -1,8 +1,11 @@
+image: node:latest
+
 pages:
   script:
     - npm install
     - npm run build
-    - mv build public
+    - mkdir public
+    - cp -r build/* public/
   artifacts:
     paths:
       - public
