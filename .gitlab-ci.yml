@@ -11,8 +11,7 @@ pages:
   stage: deploy
   script:
     - npm run build
-    - cp -r public/_/* public/
-    - rm -rf public/_
+    - cp -r public_html/* public/
   artifacts:
     paths:
       - public
