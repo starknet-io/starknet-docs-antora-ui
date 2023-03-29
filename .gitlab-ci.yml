@@ -4,7 +4,6 @@ pages:
   script:
     - npm install
     - npm run build
-    - mkdir public
     - cp -r build/* public/
   artifacts:
     paths:
