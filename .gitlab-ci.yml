@@ -7,10 +7,29 @@ cache:
 before_script:
   - npm install
 
+build:
+  stage: build
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
+
+start:
+  stage: test
+  script:
+    - npm run start
+  needs:
+    - build
+  except:
+    - main
+
 pages:
   stage: deploy
   script:
-    - npm run build
+    - cp -R public/_/* public/
   artifacts:
     paths:
       - public
