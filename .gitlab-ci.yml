@@ -28,8 +28,6 @@ start:
 
 pages:
   stage: deploy
-  script:
-    - cp -R public/_/* public/
   artifacts:
     paths:
       - public
