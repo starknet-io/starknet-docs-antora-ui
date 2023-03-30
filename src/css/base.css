@@ -17,8 +17,8 @@ html {
 }
 
 body {
-  background: var(--body-background);
-  color: var(--body-font-color);
+  background: red;
+  color: green;
   font-family: var(--body-font-family);
   line-height: var(--body-line-height);
   margin: 0;
@@ -27,6 +27,7 @@ body {
 
 a {
   text-decoration: none;
+  color: orange;
 }
 
 a:hover {
