@@ -71,8 +71,8 @@
   --heading-one-font-weight: 700;
   --heading-font-weight: 500;
   --alt-heading-font-weight: var(--body-font-weight-bold);
-  --link-font-color: #1565c0;
-  --link_hover-font-color: #104d92;
+  --link-font-color: red;
+  --link_hover-font-color: red;
   --abstract-background: var(--color-smoke-70);
   --abstract-font-color: var(--color-jet-20);
   --abstract-border-color: var(--panel-border-color);
