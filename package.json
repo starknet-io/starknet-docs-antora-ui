@@ -15,7 +15,7 @@
   ],
   "scripts": {
     "build": "gulp bundle",
-    "start": "gulp preview"
+    "start": "gulp preview:build"
   },
   "devDependencies": {
     "@asciidoctor/core": "~2.2",
