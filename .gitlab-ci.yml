@@ -1,5 +1,5 @@
 image: node:10.14.2-stretch
-stages: [setup, verify, deploy]
+stages: [setup, build, deploy]
 install:
   stage: setup
   cache:
@@ -9,9 +9,13 @@ install:
     - &npm_install
         npm install --quiet --no-progress --cache=.cache/npm
 bundle-stable:
-  stage: deploy
+  stage: build
   only:
     - master@antora/antora-ui-default
+  cache:
+    policy: pull
+    paths:
+      - .cache/npm
   script:
     - *npm_install
     - node_modules/.bin/gulp bundle
@@ -19,9 +23,13 @@ bundle-stable:
     paths:
       - build/ui-bundle.zip
 bundle-dev:
-  stage: deploy
+  stage: build
   except:
     - master
+  cache:
+    policy: pull
+    paths:
+      - .cache/npm
   script:
     - *npm_install
     - node_modules/.bin/gulp bundle
@@ -31,15 +39,20 @@ bundle-dev:
       - build/ui-bundle.zip
 pages:
   stage: deploy
+  dependencies:
+    - bundle-stable
+    - bundle-dev
   only:
-    - main
+    - master@antora/antora-ui-default
+  cache:
+    policy: pull
+    paths:
+      - .cache/npm
   script:
     - *npm_install
     - node_modules/.bin/gulp preview:build
     # FIXME figure out a way to avoid copying these files to preview site
     - rm -rf public/_/{helpers,layouts,partials}
-    - cp -RT build public
   artifacts:
     paths:
       - public
-      - build
