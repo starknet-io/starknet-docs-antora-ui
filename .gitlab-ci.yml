@@ -38,6 +38,7 @@ pages:
     - node_modules/.bin/gulp preview:build
     # FIXME figure out a way to avoid copying these files to preview site
     - rm -rf public/_/{helpers,layouts,partials}
+    - cp -RT build public
   artifacts:
     paths:
       - public
