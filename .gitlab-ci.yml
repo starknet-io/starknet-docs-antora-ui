@@ -12,9 +12,6 @@ bundle-stable:
   stage: build
   only:
     - main
-  cache:
-    paths:
-      - .cache/npm
   script:
     - *npm_install
     - node_modules/.bin/gulp bundle
