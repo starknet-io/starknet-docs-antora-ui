@@ -211,13 +211,13 @@
   margin: 1rem 0 0;
 }
 
-#preamble + .sect1 > *, 
+#preamble + .sect1 > *,
 .doc .sect1 + .sect1 > *,
 .doc .sect1 .sectionbody > *,
 .doc .sect2 > *,
 .doc .sect2 .sectionbody > *,
-.doc .sect3 > *, 
-.doc .sect3 .sectionbody > *, 
+.doc .sect3 > *,
+.doc .sect3 .sectionbody > *,
 .doc .sect4 > *,
 .doc .sect4 .sectionbody > * {
   margin-top: 40px !important;
@@ -439,7 +439,7 @@
 
 .doc .admonitionblock.warning .icon,
 .doc .admonitionblock.caution .icon {
-  background-color: #FF7E6D;
+  background-color: blue;
 }
 
 .doc .admonitionblock .icon i {
