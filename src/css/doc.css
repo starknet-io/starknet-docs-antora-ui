@@ -430,7 +430,7 @@
 }
 
 .doc .admonitionblock.important .icon {
-  background-color: #FFCD9A;
+  background-color: blue;
 }
 
 .doc .admonitionblock.note .icon {
@@ -439,7 +439,7 @@
 
 .doc .admonitionblock.warning .icon,
 .doc .admonitionblock.caution .icon {
-  background-color: #FF7E6D;
+  background-color: blue;
 }
 
 .doc .admonitionblock .icon i {
