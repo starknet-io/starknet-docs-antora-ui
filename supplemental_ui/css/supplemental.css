@@ -36,7 +36,7 @@ li.nav-item {
 }
 
 .navbar-dropdown a.navbar-item:hover {
-  color: red;
+  color: #f77d05;
 }
 /*
 .navbar-brand .navbar-item {
@@ -62,11 +62,11 @@ strong strong {
 }
 
 .doc a code {
-  color: red
+  color: #1565c0
 }
 
 .doc a code:hover {
-  color: red
+  color: #104d92
 }
 
 body {
