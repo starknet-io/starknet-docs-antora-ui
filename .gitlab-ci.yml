@@ -8,18 +8,8 @@ install:
   script:
     - &npm_install
         npm install --quiet --no-progress --cache=.cache/npm
-build:
-  stage: build
-  only:
-    - main
-  script:
-    - *npm_install
-    - node_modules/.bin/gulp build
-  artifacts:
-    paths:
-      - public
 bundle-stable:
-  stage: deploy
+  stage: build
   only:
     - main
   cache:
@@ -34,7 +24,7 @@ bundle-stable:
       - build/ui-bundle.zip
       - public/ui-bundle.zip # Make ui-bundle.zip available in the artifacts
 bundle-dev:
-  stage: deploy
+  stage: build
   except:
     - main
   cache:
@@ -54,9 +44,6 @@ pages:
   cache:
     paths:
       - .cache/npm
-  needs:
-    - job: bundle-stable
-      artifacts: true
   script:
     - *npm_install
     - node_modules/.bin/gulp preview:build
