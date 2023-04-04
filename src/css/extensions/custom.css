@@ -282,7 +282,7 @@
 }
 
 .doc {
-  font-family: "Inter", "Roboto", sans-serif;
+  font-family: "IBM PLEX SANS", "Roboto", sans-serif;
   max-width: var(--doc-max-width--desktop);
   padding: 0 1rem 2rem;
 }
