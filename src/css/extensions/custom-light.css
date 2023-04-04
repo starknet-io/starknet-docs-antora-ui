@@ -103,7 +103,11 @@
 .doc p code,
 .doc thead code {
   background-color: var(--nav-selected-bg);
-  color: #6B7280;
+  color: var(--nav-selected-fc);
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "Fira Code";
+  line-height: 14px;
 }
 
 pre {

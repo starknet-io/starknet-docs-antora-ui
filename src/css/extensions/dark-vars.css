@@ -5,7 +5,7 @@
   --panel-background: var(--color-zodiac-blue);
   --panel-border-color: var(--color-second-blue);
   --scrollbar-thumb-color: var(--color-ink-blue);
-  --divider-line-color: #313131;
+  --divider-line-color: #3D3D48;
   /* fonts */
   --body-font-color: var(--color-silver-gray);
   /* doc */
@@ -48,13 +48,13 @@
   --footer-link-font-color: var(--color-gray-60);
   --footer-icon-color: var(--color-silver-gray);
   /* doc body */
-  --doc-font-color: var(--color-silver-gray);
+  --doc-font-color: #C8C8D0;
   --doc-link-color: #AFCAFF;
-  --doc-hljs-bg: #161616;
-  --doc-hljs-border: #313131;
-  --doc-hljs-default-fc: var(--color-silver-gray);
+  --doc-hljs-bg: #17171C;
+  --doc-hljs-border: #3D3D48;
+  --doc-hljs-default-fc: #C8C8D0;
   --doc-hljs-number-color: #AFCAFF;
-  --doc-hljs-string-color: #FE9E92;
+  --doc-hljs-string-color: #C892FE;
   --adm-tip-background: #172726;
   --adm-note-background: #171C27;
   --adm-important-background: #231F1A;

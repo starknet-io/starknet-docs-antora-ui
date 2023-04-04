@@ -16,7 +16,7 @@
   /* fonts */
   --body-font-color: var(--color-black);
   /* doc */
-  --heading-font-color: #0c0c4f;
+  --heading-font-color: #28286E;
   --link-font-color: var(--color-ultramarine-blue);
   --link_hover-font-color: var(--color-ultramarine-blue);
   --link_unresolved-font-color: #C507E4;
@@ -33,7 +33,7 @@
   /* doc body */
   --doc-font-color: var(--color-jet-60);
   --doc-link-color: #5C94FF;
-  --doc-hljs-bg: #F6F6F6;
+  --doc-hljs-bg: #F0F0F0;
   --doc-hljs-border: var(--color-silver-gray);
   --doc-hljs-default-fc: var(--color-jet-60);
   --doc-hljs-number-color: #2266EF;

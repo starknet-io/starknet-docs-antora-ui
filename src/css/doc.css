@@ -28,7 +28,7 @@
   font-family: "IBM PLEX SANS", "Roboto", sans-serif;
   hyphens: none;
   line-height: 1;
-  margin: 40px 0;
+  margin: 20px 0;
   font-weight: var(--doc-heading-font-weight);
 }
 
@@ -65,7 +65,7 @@
 
 #preamble + .sect1,
 .doc .sect1 + .sect1 {
-  margin-top: 6.5rem;
+  margin-top: 3.75rem;
 }
 
 .doc h1.sect0 {
@@ -144,8 +144,8 @@
 .doc p code,
 .doc thead code,
 .doc .colist > table code {
-  color: var(--code-font-color);
-  background: var(--code-background);
+  color: var(--nav-selected-fc);
+  background: var(--nav-selected-bg);
   border-radius: 0.25em;
 }
 
@@ -222,7 +222,7 @@
 .doc .sect3 .sectionbody > *,
 .doc .sect4 > *,
 .doc .sect4 .sectionbody > * {
-  margin-top: 40px !important;
+  margin: 20px 0!important;
 }
 .doc table.tableblock {
   margin: 1.5rem 0 0;
@@ -343,6 +343,8 @@
 
 .doc .admonitionblock {
   border-radius: 8px;
+  font-size: 14px;
+  line-height: 24px;
 }
 
 .doc .admonitionblock.tip {
@@ -387,7 +389,7 @@
 
 .doc .admonitionblock p,
 .doc .admonitionblock td.content {
-  line-height: 1.5;
+  line-height: 1.71428571;
 }
 
 @media screen and (min-width: 1024px) {
@@ -768,6 +770,7 @@
   overflow-x: auto;
   padding: 1.5rem;
   border-radius: 0.5rem;
+  font-weight: 400;
   background-color: var(--doc-hljs-bg);
   border: 1px solid var(--doc-hljs-border);
 }
@@ -777,6 +780,7 @@
 .admonitionblock .literalblock pre {
   background-color: var(--admonition-hljs-bg);
   border: none;
+  font-weight: 400;
 }
 
 
