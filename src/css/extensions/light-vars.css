@@ -1,8 +1,8 @@
 :root {
   --nav-background: var(--body-background);
-  --nav-selected-bg: #EBF2FF;
+  --nav-selected-bg: #FFF2EB;
   --nav-selected-icon-bg: #5C94FF;
-  --nav-selected-fc: #0C0C4F;
+  --nav-selected-fc: #C34624;
   --nav-secondary-background: var(--color-athens-white);
   --nav-heading-fc: var(--color-jet-60);
   --nav-fc: var(--color-gray-80);

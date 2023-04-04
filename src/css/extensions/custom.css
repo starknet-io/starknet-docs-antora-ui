@@ -194,10 +194,10 @@
 } */
 
 .starknet-logo {
-  background-image: url(../img/starknet-logo-white.svg);
+  background-image: url(../img/starkex-logo-light.svg);
   background-repeat: no-repeat;
   display: inline-block;
-  height: 40px;
+  height: 30px;
 }
 
 .docs-logo {

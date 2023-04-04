@@ -19,6 +19,7 @@
   --color-fury-red: #ff4557;
   --rgb-fury-red: 255, 69, 87;
   --color-orange: #ff8743;
+  --color-dark-accent-content: #312721;
   --rgb-orange: 255, 135, 67;
   --navbar-height: calc(88 / var(--rem-base) * 1rem);
   --nav-width: calc(324 / var(--rem-base) * 1rem);

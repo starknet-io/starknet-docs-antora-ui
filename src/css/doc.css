@@ -25,6 +25,7 @@
 .doc h5,
 .doc h6 {
   color: var(--heading-font-color);
+  font-family: "IBM PLEX SANS", "Roboto", sans-serif;
   hyphens: none;
   line-height: 1;
   margin: 40px 0;
@@ -32,6 +33,7 @@
 }
 
 .doc > h1.page:first-child {
+  font-family: "IBM PLEX SANS", "Roboto", sans-serif;
   font-size: 1.5rem;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
