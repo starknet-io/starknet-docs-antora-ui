@@ -21,7 +21,6 @@
   --color-jet-80: #191919;
   --color-black: #000;
   /* new colors */
-  --color-light-accent-content: #C34624;
   /* fonts */
   --rem-base: 18; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
   --body-font-size: 1em; /* 17px */

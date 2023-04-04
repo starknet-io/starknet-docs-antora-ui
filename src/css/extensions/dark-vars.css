@@ -12,10 +12,12 @@
   --example-border-color: var(--color-second-blue);
   --heading-font-color: var(--color-white);
   --link-font-color: var(--color-ultramarine-blue);
-  --link_hover-font-color: var(--color-ultramarine-blue);
+  --link_hover-font-color: #e6a08d;
   --link_unresolved-font-color: #FE9E92;
   --caption-font-color: var(--color-ufo-green);
   --table-footer-background: linear-gradient(to bottom, var(--color-zodiac-blue) 0%, var(--color-black) 100%);
+  --color-dark-accent-content: #E7947E;
+  --color-light-accent-tertiary: #838395;
   /* toc */
   --toc-heading-font-color: var(--color-white);
   --toc-font-color: var(--color-gray-60);
@@ -35,7 +37,7 @@
   /* nav */
   --nav-background: var(--color-zodiac-blue);
   --nav-selected-bg: #312721;
-  --nav-selected-fc: #E7947E;
+  --nav-selected-fc: var(--color-dark-accent-content);
   --nav-selected-icon-bg: #FE9E92;
   --nav-secondary-background: var(--color-black);
   --nav-muted-color: var(--color-athens-white);
@@ -49,7 +51,7 @@
   --footer-icon-color: var(--color-silver-gray);
   /* doc body */
   --doc-font-color: #C8C8D0;
-  --doc-link-color: #AFCAFF;
+  --doc-link-color: var(--color-dark-accent-content);
   --doc-hljs-bg: #17171C;
   --doc-hljs-border: #3D3D48;
   --doc-hljs-default-fc: #C8C8D0;
@@ -94,5 +96,5 @@
   --docsearch-muted-color: var(--color-platinum-gray);
 
   /* breadcrumbs */
-  --breadcrumbs-font-color: #858585;
+  --breadcrumbs-font-color: var(--color-light-accent-tertiary);
 }
