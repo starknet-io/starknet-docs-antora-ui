@@ -108,10 +108,11 @@ aside.toc.embedded {
 .sidebar.toc .toc-menu a {
   display: block;
   outline: none;
+  font-weight: 500;
 }
 
 .toc .toc-menu a:hover {
-  color: var(--link-font-color);
+  color: var(--link_hover-font-color);
 }
 
 .toc .toc-menu a.is-active {

@@ -4,8 +4,8 @@
   --body-background: var(--color-zodiac-blue);
   --panel-background: var(--color-zodiac-blue);
   --panel-border-color: var(--color-second-blue);
-  --scrollbar-thumb-color: var(--color-ink-blue);
-  --divider-line-color: #3D3D48;
+  --scrollbar-thumb-color: var(--color-dark-accent-content);
+  --divider-line-color: #212127;
   /* fonts */
   --body-font-color: var(--color-silver-gray);
   /* doc */
@@ -38,7 +38,7 @@
   --nav-background: var(--color-zodiac-blue);
   --nav-selected-bg: #312721;
   --nav-selected-fc: var(--color-dark-accent-content);
-  --nav-selected-icon-bg: #FE9E92;
+  --nav-selected-icon-bg: var(--color-dark-accent-content);
   --nav-secondary-background: var(--color-black);
   --nav-muted-color: var(--color-athens-white);
   --nav-panel-divider-color: var(--color-second-blue);

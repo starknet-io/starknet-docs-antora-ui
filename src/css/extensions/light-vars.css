@@ -1,7 +1,7 @@
 :root {
   --nav-background: var(--body-background);
   --nav-selected-bg: #FFF2EB;
-  --nav-selected-icon-bg: #5C94FF;
+  --nav-selected-icon-bg: var(--color-light-accent-content);
   --nav-selected-fc: var(--color-light-accent-content);
   --nav-secondary-background: var(--color-athens-white);
   --nav-heading-fc: var(--color-jet-60);

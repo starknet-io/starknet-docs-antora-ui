@@ -36,8 +36,8 @@
   --body-background: var(--color-smoke-80);
   --panel-background: var(--color-smoke-30);
   --panel-border-color: var(--divider-line-color);
-  --scrollbar-thumb-color: var(--color-gray-10);
-  --divider-line-color: #DBDBDB;
+  --scrollbar-thumb-color: var(--color-light-accent-content);
+  --divider-line-color: #EFEFEF;
   /* navbar */
   --navbar-background: var(--color-jet-80);
   --navbar-font-color: var(--color-white);

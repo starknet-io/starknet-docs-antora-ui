@@ -51,6 +51,12 @@
   width: 149px;
 }
 
+.starknet-logo-small {
+  background-image: url(../img/starkex-logo-dark.svg);
+  height: 30px;
+  width: 148px;
+}
+
 .docs-logo {
   color: var(--color-white);
 }

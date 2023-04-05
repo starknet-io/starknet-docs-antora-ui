@@ -200,6 +200,14 @@
   height: 30px;
 }
 
+.starknet-logo-small {
+  background-image: url(../img/starkex-logo-light.svg);
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 30px;
+  width: 148px;
+}
+
 .docs-logo {
   font-size: 1.1875rem;
   line-height: 1.44;
@@ -356,12 +364,11 @@ footer.footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2.5rem;
+  gap: 2.2188rem;
 }
 
 .footer_icon {
   display: flex;
-  padding: 0 0 0 1.5rem;
   height: 1.25rem;
   background-size: 1.25rem;
   background-repeat: no-repeat;
