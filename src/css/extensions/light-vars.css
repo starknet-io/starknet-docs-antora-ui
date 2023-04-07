@@ -50,6 +50,7 @@
   --adm-warning-border: 1px solid #E7D5D4;
   --admonition-hljs-bg: rgba(255, 255, 255, 0.75);
   /* docsearch */
+  --docsearch-background: #F0F0F0;
   --docsearch-primary-color: #5468ff;
   --docsearch-text-color: #1c1e21;
   --docsearch-spacing: 12px;

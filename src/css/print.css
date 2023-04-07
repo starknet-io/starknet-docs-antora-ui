@@ -52,6 +52,11 @@
     color: inherit !important;
   }
 
+  .toolbar {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
   .navbar > :not(.navbar-brand),
   .nav-container,
   .toolbar,

@@ -945,7 +945,7 @@
 .aa-DetachedSearchButton {
   align-items: center;
   background-color: #fff;
-  background-color: rgba(var(--aa-input-background-color-rgb), var(--aa-input-background-color-alpha));
+  background-color: var(--docsearch-background);
   border: 1px solid rgba(128, 126, 163, .8);
   border: 1px solid rgba(var(--aa-input-border-color-rgb), var(--aa-input-border-color-alpha));
   border-radius: 3px;

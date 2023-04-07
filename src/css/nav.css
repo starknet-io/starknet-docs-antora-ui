@@ -117,7 +117,7 @@ html.is-clipped--nav {
 }
 @media screen and (min-width: 1024px) {
   .nav-menu {
-    padding: 0.5rem 0 0.5rem 0;
+    padding: 1.5rem 0 0.5rem 0;
   }
 }
 
@@ -145,7 +145,7 @@ html.is-clipped--nav {
 .nav-item {
   list-style: none;
   font-size: 0.875rem;
-  line-height: 1.5;
+  line-height: 1.7146;
   /* padding-block: 0.625rem; */
   margin-left: -16rem;
   padding-left: 16rem;
@@ -187,12 +187,16 @@ html.is-clipped--nav {
   position: absolute;
   height: calc(var(--nav-line-height) * 1em);
   width: calc(var(--nav-line-height) * 1em);
-  margin-top: 0.7em;
+  margin-top: 1em;
   right: 1em;
 
   mask-image: url(../img/chevron-toggle.svg);
   -webkit-mask-image: url(../img/chevron-toggle.svg);
   background-color: var(--color-gray-80);
+}
+
+.nav-item.is-active .nav-item-toggle {
+  margin-top: 0.8em;
 }
 
 .nav-item-toggle:hover {
@@ -339,13 +343,18 @@ html.is-clipped--nav {
 .nav-list > .parent[data-depth="1"] > span > a {
   font-weight: 500;
   font-size: 0.9375rem;
-  line-height: 1.5;
+  line-height: 1.7146;
 }
 
 .nav-list > .nav-item[data-depth="1"]:not(.is-current-page) > span,
 .nav-list > .nav-item[data-depth="1"]:not(.is-current-page) > a,
 .nav-list > .parent[data-depth="1"]:not(.is-current-page) > span > a {
   color: var(--nav-heading-fc);
+}
+
+.nav-list > .is-active.nav-item[data-depth="1"]:not(.is-current-page) > span,
+.nav-list > .is-active.nav-item[data-depth="1"]:not(.is-current-page) > a {
+  color: var(--nav-selected-fc);
 }
 
 .nav-panel-explore.is-active .context .version::after {
@@ -383,6 +392,10 @@ html.is-clipped--nav {
 .is-current-page > .nav-link {
   color: var(--nav-selected-fc);
   font-weight: 500;
+}
+
+.nav-list .is-active {
+  color: var(--nav-selected-fc);
 }
 
 .components-versions {

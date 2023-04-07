@@ -20,7 +20,7 @@
   --color-light-accent-tertiary: #838395;
   /* toc */
   --toc-heading-font-color: var(--color-white);
-  --toc-font-color: var(--color-gray-60);
+  --toc-font-color: var(--color-light-accent-tertiary);
   /* navbar */
   --navbar-background: var(--color-zodiac-blue);
   --navbar-font-color: var(--color-jet-60);
@@ -45,7 +45,7 @@
   --nav-heading-fc: var(--color-white);
   --nav-fc: var(--color-silver-gray);
   /*  footer  */
-  --footer-background: #0b0b0b;
+  --footer-background: var(--color-zodiac-blue);
   --footer-font-color: var(--color-gray-60);
   --footer-link-font-color: var(--color-gray-60);
   --footer-icon-color: var(--color-silver-gray);
@@ -68,6 +68,7 @@
   --admonition-hljs-bg: rgba(0, 0, 0, 0.65);
   /* docsearch */
   --docsearch-primary-color: #5468ff;
+  --docsearch-background: #17171C;
   --docsearch-spacing: 12px;
   --docsearch-icon-stroke-width: 1.4;
   --docsearch-highlight-color: var(--docsearch-primary-color);

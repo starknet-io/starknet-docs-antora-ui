@@ -69,6 +69,8 @@ aside.toc.embedded {
 
 .toc .toc-menu li[data-level="2"] a {
   padding-left: 2rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
 }
 
 .toc .toc-menu li[data-level="3"] a {

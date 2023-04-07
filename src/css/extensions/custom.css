@@ -80,9 +80,17 @@
 .navbar {
   padding-inline: 1rem;
 }
+
+.navbar-content {
+  display: flex;
+  width: 100%;
+}
+
 @media screen and (min-width: 1024px) {
   .toolbar {
     padding: 0 2em 0 1.5em;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 
   main > .content {
@@ -238,6 +246,11 @@
     position: relative;
     min-height: calc(100vh - 13rem);
   }
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .theme-toggle{
     margin-inline: auto;
   }
@@ -349,10 +362,12 @@
 }
 
 footer .footerdiv {
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
   display: flex;
   flex: auto;
   justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1440px;
 }
 
 footer.footer {
@@ -525,6 +540,10 @@ footer.footer {
 @media screen and (min-width: 1024px) {
   .desktop-only {
     display: block;
+  }
+  .navbar-content {
+    max-width: 1440px;
+    margin: 0 auto;
   }
   .mobile-only{
     display: none;
