@@ -12,6 +12,7 @@
   --navbar-font-color: var(--color-jet-60);
   --page-version-menu-background: var(--color-athens-white);
   --panel-background: var(--color-athens-white);
+  --panel-border-color: var(--color-border-primary);
   --burger-menu-fc: var(--color-jet-60);
   /* fonts */
   --body-font-color: var(--color-black);
@@ -23,6 +24,7 @@
   --caption-font-color: var(--color-ink-blue);
   --color-light-accent-content: #C34624;
   --color-light-accent-tertiary: #666D7A;
+  --color-border-primary: #CCCCCC;
 
   /* toc */
   --toc-heading-font-color: var(--heading-font-color);

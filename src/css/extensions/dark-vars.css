@@ -3,7 +3,7 @@
   /* base */
   --body-background: var(--color-zodiac-blue);
   --panel-background: var(--color-zodiac-blue);
-  --panel-border-color: var(--color-second-blue);
+  --panel-border-color: var(--doc-hljs-border);
   --scrollbar-thumb-color: var(--color-dark-accent-content);
   --divider-line-color: #212127;
   /* fonts */
@@ -42,8 +42,8 @@
   --nav-secondary-background: var(--color-black);
   --nav-muted-color: var(--color-athens-white);
   --nav-panel-divider-color: var(--color-second-blue);
-  --nav-heading-fc: var(--color-white);
-  --nav-fc: var(--color-silver-gray);
+  --nav-heading-fc: var(--doc-font-color);
+  --nav-fc: var(--color-light-accent-tertiary);
   /*  footer  */
   --footer-background: var(--color-zodiac-blue);
   --footer-font-color: var(--color-gray-60);

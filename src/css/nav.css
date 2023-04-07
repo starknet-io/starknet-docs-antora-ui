@@ -341,7 +341,7 @@ html.is-clipped--nav {
 .nav-list > .nav-item[data-depth="1"] > span,
 .nav-list > .nav-item[data-depth="1"] > a,
 .nav-list > .parent[data-depth="1"] > span > a {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.9375rem;
   line-height: 1.7146;
 }
@@ -372,6 +372,9 @@ html.is-clipped--nav {
 
 .nav-list > .nav-item[data-depth="1"] {
   /* margin-top: 1em; */
+}
+.nav-list > .nav-item[data-depth="2"], .nav-list > .nav-item[data-depth="2"] {
+  font-weight: 500;
 }
 
 .nav-menu > .title {

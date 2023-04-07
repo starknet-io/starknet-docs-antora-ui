@@ -35,7 +35,7 @@
   /* base */
   --body-background: var(--color-smoke-80);
   --panel-background: var(--color-smoke-30);
-  --panel-border-color: var(--divider-line-color);
+  --panel-border-color: var(--panel-border-color);
   --scrollbar-thumb-color: var(--color-light-accent-content);
   --divider-line-color: #EFEFEF;
   /* navbar */
