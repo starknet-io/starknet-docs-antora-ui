@@ -32,12 +32,6 @@
   background: var(--color-dark-background);
 }
 
-.navbar-end .navbar-item.has-dropdown:hover .navbar-link {
-  border-left: 1px solid var(--color-second-blue);
-  border-top: 1px solid var(--color-second-blue);
-  border-right: 1px solid var(--color-second-blue);
-}
-
 .doc .sidebarblock.overview-box {
   border: 1px solid var(--color-second-blue);
 }
@@ -72,9 +66,6 @@
   background-color: var(--color-dark-background);
 }
 
-.navbar-end .navbar-item .navbar-dropdown {
-  border-top: 1px solid var(--color-second-blue);
-}
 
 .theme-toggle:hover {
   /* background-image: url(../img/moon-filled.svg);
