@@ -519,6 +519,10 @@ footer.footer {
   border-width: 0;
 }
 
+.doc table.tableblock tr:first-child td {
+  border-top: none;
+}
+
 .dark-mode-label,
 .light-mode-label{
   display: none;

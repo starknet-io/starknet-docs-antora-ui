@@ -9,7 +9,7 @@
 .hljs-selector-tag,
 .hljs-subst {
   color: #333;
-  font-weight: var(--monospace-font-weight-bold);
+  font-weight: 400;
 }
 
 .hljs-number,
@@ -29,7 +29,7 @@
 .hljs-section,
 .hljs-selector-id {
   color: #900;
-  font-weight: var(--monospace-font-weight-bold);
+  font-weight: 400;
 }
 
 .hljs-subst {
@@ -39,7 +39,7 @@
 .hljs-type,
 .hljs-class .hljs-title {
   color: #458;
-  font-weight: var(--monospace-font-weight-bold);
+  font-weight: 400;
 }
 
 .hljs-tag,

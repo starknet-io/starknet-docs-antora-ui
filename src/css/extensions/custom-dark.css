@@ -157,9 +157,17 @@ footer.footer {
   box-shadow: 0 0 0 1px #313131;
 }
 
-.doc table.tableblock,
 .doc table.tableblock > * > tr > * {
-  border-color: #313131;
+  border-color: var(--primary-border);
+}
+
+.doc table.tableblock {
+  border-color: var(--opacity-on-color);
+}
+
+.doc table.tableblock tr:first-child td {
+  border-top: none;
+  border-bottom: var(--opacity-on-color)!important;
 }
 
 .components-versions {

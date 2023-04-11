@@ -18,6 +18,8 @@
   --table-footer-background: linear-gradient(to bottom, var(--color-zodiac-blue) 0%, var(--color-black) 100%);
   --color-dark-accent-content: #E7947E;
   --color-light-accent-tertiary: #838395;
+  --opacity-on-color: #595959;
+  --primary-border: #3D3D48;
   /* toc */
   --toc-heading-font-color: var(--color-white);
   --toc-font-color: var(--color-light-accent-tertiary);

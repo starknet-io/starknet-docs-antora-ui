@@ -172,8 +172,3 @@ code.hljs {
   color: #d33682;
 }
 
-.hljs-meta .hljs-keyword,
-  /* for v10 compatible themes */
-.hljs-meta-keyword {
-  font-weight: bold;
-}
