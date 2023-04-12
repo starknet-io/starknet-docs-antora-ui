@@ -409,8 +409,67 @@
   padding: 0 1.5rem; */
   padding: 8px 12px;
   border-radius: 4px;
-  min-width: 96px;
   text-align: center;
+}
+
+.doc .admonitionblock .icon .icon-note::before {
+  background-image: url('../img/pencil-filled.svg');
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 20px;
+  margin-right: 8px;
+  width: 20px;
+}
+
+.doc .admonitionblock .icon .icon-warning::before {
+  background-image: url('../img/warning-outlined.svg');
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 20px;
+  margin-right: 8px;
+  width: 20px;
+}
+
+.doc .admonitionblock .icon .icon-caution::before {
+  background-image: url('../img/i-caution-outlined.svg');
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 20px;
+  margin-right: 8px;
+  width: 20px;
+}
+
+.doc .admonitionblock .icon .icon-important::before {
+  background-image: url('../img/flag-filled.svg');
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 20px;
+  margin-right: 8px;
+  width: 20px;
+}
+
+.doc .admonitionblock .icon .icon-tip::before {
+  background-image: url('../img/tip-outlined.svg');
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 20px;
+  margin-right: 8px;
+  width: 20px;
 }
 
 .doc .admonitionblock.tip td.content {
@@ -448,7 +507,7 @@
 }
 
 .doc .admonitionblock .icon i {
-  color: #363636;
+  color: var(--admonition-color);
   font-size: 14px;
   line-height: 1;
   font-weight: 700;
@@ -464,6 +523,8 @@
 
 .doc .admonitionblock .icon i::after {
   content: attr(title);
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .doc .imageblock {
