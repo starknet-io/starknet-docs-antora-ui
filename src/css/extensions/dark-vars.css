@@ -1,7 +1,7 @@
 :root {
   /* base */
-  --body-background: var(--color-zodiac-blue);
-  --panel-background: var(--color-zodiac-blue);
+  --body-background: var(--color-primary-dark);
+  --panel-background: var(--color-primary-dark);
   --panel-border-color: var(--doc-hljs-border);
   --scrollbar-thumb-color: var(--color-dark-accent-content);
   --divider-line-color: #212127;
@@ -20,11 +20,11 @@
   --opacity-on-color: #595959;
   --primary-border: #3D3D48;
   /* toc */
-  --toc-heading-font-color: var(--color-white);
+  --toc-heading-font-color: #C8C8D0;
   --toc-font-color: var(--color-light-accent-tertiary);
   /* navbar */
   --navbar-background: var(--color-zodiac-blue);
-  --navbar-font-color: var(--color-jet-60);
+  --navbar-font-color: #C8C8D0;
   --navbar_hover-background: var(--color-dark-background);
   --navbar-button-background: var(--color-zodiac-blue);
   --navbar-menu-background: var(--color-dark-background);

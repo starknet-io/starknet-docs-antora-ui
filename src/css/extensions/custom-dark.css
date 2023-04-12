@@ -1,6 +1,6 @@
 .navbar-end .navbar-link,
 .navbar-end > .navbar-item {
-  color: var(--color-white);
+  color: var(--navbar-font-color);
 }
 
 .light-mode-label{

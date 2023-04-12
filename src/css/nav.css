@@ -170,6 +170,12 @@ html.is-clipped--nav {
   }
 }
 
+@media screen and (min-width: 1440px) {
+  .nav-menu > .nav-list{
+    margin-left: 0;
+  }
+}
+
 /* matches list without a title */
 .nav-item[data-depth="0"] > .nav-list:first-child {
   display: block;

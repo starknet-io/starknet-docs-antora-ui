@@ -217,9 +217,10 @@
 }
 
 .docs-logo {
-  font-size: 1.1875rem;
+  font-size: 1rem;
   line-height: 1.44;
   letter-spacing: 0.01em;
+  font-weight: 500;
   color: var(--navbar-font-color);
 }
 
@@ -408,8 +409,10 @@ footer.footer {
 .vertical-divider {
   width: 1px;
   height: 2rem;
-  background: var(--divider-line-color);
+  background: var(--primary-border);
   border-radius: 2px;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 .hr-divider {

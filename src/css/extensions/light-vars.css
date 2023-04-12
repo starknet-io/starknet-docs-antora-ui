@@ -9,7 +9,7 @@
 
   /* navbar */
   --navbar_hover-background: var(--color-white);
-  --navbar-font-color: var(--color-jet-60);
+  --navbar-font-color: #363636;
   --page-version-menu-background: var(--color-athens-white);
   --panel-background: var(--color-athens-white);
   --panel-border-color: var(--color-border-primary);
@@ -25,9 +25,10 @@
   --color-light-accent-content: #C34624;
   --color-light-accent-tertiary: #666D7A;
   --color-border-primary: #CCCCCC;
+  --primary-border: #DBDBDB;
 
   /* toc */
-  --toc-heading-font-color: var(--heading-font-color);
+  --toc-heading-font-color: #363636;
   --toc-font-color: var(--color-gray-80);
   /*  footer  */
   --footer-background: var(--body-background);
