@@ -149,6 +149,11 @@
   border-radius: 0.25em;
 }
 
+.tableblock thead {
+  border-bottom: 1px solid;
+  border-color: var(--primary-border)
+}
+
 .doc code,
 .doc pre {
   hyphens: none;

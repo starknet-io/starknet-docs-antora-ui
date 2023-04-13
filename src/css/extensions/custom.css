@@ -556,7 +556,7 @@ footer.footer {
     display: none;
   }
   footer.footer {
-    position: sticky;
+    position: relative;
     bottom: 0;
     z-index: 10;
   }
