@@ -397,6 +397,21 @@
     padding: 24px 24px 24px 152px;
     min-height: 96px;
   }
+  .doc .admonitionblock.note td.content {
+    padding: 24px 24px 24px 141px;
+  }
+  .doc .admonitionblock.important td.content {
+    padding: 24px 24px 24px 176px;
+  }
+  .doc .admonitionblock.caution td.content {
+    padding: 24px 24px 24px 162px;
+  }
+  .doc .admonitionblock.warning td.content {
+    padding: 24px 24px 24px 166px;
+  }
+  .doc .admonitionblock.tip td.content {
+    padding: 24px 24px 24px 131px;
+  }
 }
 .doc .admonitionblock .icon {
   position: absolute;
