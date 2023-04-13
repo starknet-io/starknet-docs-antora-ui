@@ -544,6 +544,12 @@ footer.footer {
 .desktop-only {
   display: none;
 }
+@media screen and (min-width: 1440px) {
+  .top-logo {
+    /* so that search bar starts after border*/
+    width: calc(var(--nav-width))!important;
+  }
+}
 @media screen and (min-width: 1024px) {
   .desktop-only {
     display: block;
