@@ -87,7 +87,7 @@
 }
 
 .doc .imageblock {
-  border: var(--color-platinum-gray) 1px solid;
+  border: var(--primary-border) 1px solid;
 }
 
 .doc .colist > table code,

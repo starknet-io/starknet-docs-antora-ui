@@ -313,6 +313,10 @@
   border-radius: 0.5rem;
 }
 
+.doc .imageblock .content img {
+  border-radius: 0.5rem;
+}
+
 .doc .imageblock .title {
   margin: unset;
 }
