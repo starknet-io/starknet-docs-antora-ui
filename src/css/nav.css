@@ -216,7 +216,7 @@ html.is-clipped--nav {
 
 .is-current-page > .nav-link,
 .is-current-page > .nav-text {
-  font-weight: var(--body-font-weight-bold);
+  font-weight: 500;
 }
 
 .nav-panel-explore {
@@ -347,7 +347,7 @@ html.is-clipped--nav {
 .nav-list > .nav-item[data-depth="1"] > span,
 .nav-list > .nav-item[data-depth="1"] > a,
 .nav-list > .parent[data-depth="1"] > span > a {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.9375rem;
   line-height: 1.7146;
 }
