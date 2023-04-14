@@ -28,7 +28,7 @@
   --body-font-family: "IBM PLEX SANS", "Roboto", sans-serif;
   --nav-height--desktop: calc(var(--body-min-height) - var(--toolbar-height));
   --doc-font-size--desktop: calc(18 / var(--rem-base) * 1rem);
-  --doc-line-height: 2;
+  --doc-line-height: 1.9;
   --heading-one-font-weight: 700;
   --heading-font-weight: 500;
 }
