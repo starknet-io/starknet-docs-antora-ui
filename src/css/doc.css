@@ -32,6 +32,14 @@
   font-weight: var(--doc-heading-font-weight);
 }
 
+.doc h4, .doc h3 {
+  margin-bottom: 12px!important;
+}
+
+.doc .listingblock, .doc h4 + .ulist, .doc h3 + .ulist {
+  margin-top: 12px !important;
+}
+
 .doc > h1.page:first-child {
   font-family: "IBM PLEX SANS", "Roboto", sans-serif;
   font-size: 1.5rem;
@@ -227,7 +235,7 @@
 .doc .sect3 .sectionbody > *,
 .doc .sect4 > *,
 .doc .sect4 .sectionbody > * {
-  margin: 20px 0 !important;
+  margin: 20px 0;
 }
 .doc table.tableblock {
   margin: 1.5rem 0 0;
