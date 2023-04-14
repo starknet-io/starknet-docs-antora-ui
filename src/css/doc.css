@@ -151,7 +151,7 @@
 
 .tableblock thead {
   border-bottom: 1px solid;
-  border-color: var(--primary-border)
+  border-color: var(--primary-border);
 }
 
 .doc code,
@@ -161,7 +161,7 @@
   border-radius: 0.5rem;
 }
 
-.doc code{
+.doc code {
   padding: 4px;
 }
 
@@ -227,7 +227,7 @@
 .doc .sect3 .sectionbody > *,
 .doc .sect4 > *,
 .doc .sect4 .sectionbody > * {
-  margin: 20px 0!important;
+  margin: 20px 0 !important;
 }
 .doc table.tableblock {
   margin: 1.5rem 0 0;
@@ -423,6 +423,7 @@
   line-height: 1;
   top: 32px;
   left: 24px;
+  z-index: 1;
 
   /* height: 3rem;
   padding: 0 1.5rem; */
@@ -431,8 +432,20 @@
   text-align: center;
 }
 
+@media screen and (min-width: 1024px) {
+  .doc .admonitionblock.one-line-block .icon {
+    top: 18px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .doc .admonitionblock .icon {
+    top: 24px;
+  }
+}
+
 .doc .admonitionblock .icon .icon-note::before {
-  background-image: url('../img/pencil-filled.svg');
+  background-image: url("../img/pencil-filled.svg");
   background-repeat: no-repeat;
   background-size: 20px 20px;
   content: "";
@@ -444,7 +457,7 @@
 }
 
 .doc .admonitionblock .icon .icon-warning::before {
-  background-image: url('../img/warning-outlined.svg');
+  background-image: url("../img/warning-outlined.svg");
   background-repeat: no-repeat;
   background-size: 20px 20px;
   content: "";
@@ -456,7 +469,7 @@
 }
 
 .doc .admonitionblock .icon .icon-caution::before {
-  background-image: url('../img/i-caution-outlined.svg');
+  background-image: url("../img/i-caution-outlined.svg");
   background-repeat: no-repeat;
   background-size: 20px 20px;
   content: "";
@@ -468,7 +481,7 @@
 }
 
 .doc .admonitionblock .icon .icon-important::before {
-  background-image: url('../img/flag-filled.svg');
+  background-image: url("../img/flag-filled.svg");
   background-repeat: no-repeat;
   background-size: 20px 20px;
   content: "";
@@ -480,7 +493,7 @@
 }
 
 .doc .admonitionblock .icon .icon-tip::before {
-  background-image: url('../img/tip-outlined.svg');
+  background-image: url("../img/tip-outlined.svg");
   background-repeat: no-repeat;
   background-size: 20px 20px;
   content: "";
@@ -509,20 +522,20 @@
 }
 
 .doc .admonitionblock.tip .icon {
-  background-color: #80DCDA;
+  background-color: #80dcda;
 }
 
 .doc .admonitionblock.important .icon {
-  background-color: #FFCD9A;
+  background-color: #ffcd9a;
 }
 
 .doc .admonitionblock.note .icon {
-  background-color: #B6CFFF;
+  background-color: #b6cfff;
 }
 
 .doc .admonitionblock.warning .icon,
 .doc .admonitionblock.caution .icon {
-  background-color: #FF7E6D;
+  background-color: #ff7e6d;
 }
 
 .doc .admonitionblock .icon i {
@@ -864,7 +877,6 @@
   font-weight: 400;
 }
 
-
 .doc .source-toolbox {
   display: flex;
   visibility: hidden;
@@ -913,7 +925,7 @@
   flex: none;
   width: inherit;
   height: inherit;
-  background: url("../img/octicons-16.svg")
+  background: url("../img/octicons-16.svg");
 }
 
 .doc .source-toolbox img.copy-icon {
@@ -1057,7 +1069,8 @@
   background: var(--kbd-background);
   border: 1px solid var(--kbd-border-color);
   border-radius: 0.25em;
-  box-shadow: 0 1px 0 var(--kbd-border-color), 0 0 0 0.1em var(--body-background) inset;
+  box-shadow: 0 1px 0 var(--kbd-border-color),
+    0 0 0 0.1em var(--body-background) inset;
   padding: 0.25em 0.5em;
   vertical-align: text-bottom;
   white-space: nowrap; /* effectively ignores hyphens setting */
@@ -1136,7 +1149,7 @@
   width: 1.5em;
 }
 
-.stemblock{
+.stemblock {
   overflow-x: auto;
   padding-block: 1rem;
   border-radius: 0.5rem;
