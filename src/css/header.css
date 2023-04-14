@@ -199,6 +199,12 @@ body {
 
 }
 
+@media screen and (min-width: 1280px) {
+  .navbar-end {
+    gap: 2rem!important;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .navbar-burger {
     display: none;
@@ -212,7 +218,7 @@ body {
 
   .navbar-end {
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
   }
 
   .navbar-item,

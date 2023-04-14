@@ -160,7 +160,8 @@
   line-height: 1em;
   margin: 0;
   padding: 0;
-  text-align: left
+  text-align: left;
+  margin-right: 18px;
 }
 
 .aa-DetachedFormContainer {
