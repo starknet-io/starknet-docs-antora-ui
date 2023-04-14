@@ -86,6 +86,10 @@
   width: 100%;
 }
 
+.content {
+  position: relative;
+}
+
 @media screen and (min-width: 1024px) {
   .toolbar {
     padding: 0 2em 0 1.5em;
@@ -354,7 +358,7 @@
 @media screen and (max-width: 1023.5px) {
   footer .footerdiv{
     flex-direction: column-reverse;
-    align-items: center;
+    align-items: flex-start;
     gap: 1.3rem;
   }
   .footer_icon  p {

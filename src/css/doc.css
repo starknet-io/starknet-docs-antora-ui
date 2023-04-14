@@ -913,6 +913,7 @@
   flex: none;
   width: inherit;
   height: inherit;
+  background: url("../img/octicons-16.svg")
 }
 
 .doc .source-toolbox img.copy-icon {
