@@ -803,9 +803,9 @@
 .doc .exampleblock > .content,
 .doc details.result > .content {
   background: var(--example-background);
-  border: 0.25rem solid var(--example-border-color);
+  border: 0.1rem solid var(--primary-border);
   border-radius: 0.5rem;
-  padding: 0.75rem;
+  padding: 1.75rem;
 }
 
 .doc .exampleblock > .content::after,
