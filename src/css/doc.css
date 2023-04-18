@@ -427,7 +427,7 @@
 }
 .doc .admonitionblock .icon {
   position: absolute;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1;
   top: 32px;
   left: 24px;
@@ -455,61 +455,56 @@
 .doc .admonitionblock .icon .icon-note::before {
   background-image: url("../img/pencil-filled.svg");
   background-repeat: no-repeat;
-  background-size: 20px 20px;
   content: "";
   display: inline-block;
   vertical-align: middle;
-  height: 20px;
   margin-right: 8px;
-  width: 20px;
 }
 
 .doc .admonitionblock .icon .icon-warning::before {
   background-image: url("../img/warning-outlined.svg");
   background-repeat: no-repeat;
-  background-size: 20px 20px;
   content: "";
   display: inline-block;
   vertical-align: middle;
-  height: 20px;
   margin-right: 8px;
-  width: 20px;
 }
 
 .doc .admonitionblock .icon .icon-caution::before {
   background-image: url("../img/i-caution-outlined.svg");
   background-repeat: no-repeat;
-  background-size: 20px 20px;
   content: "";
   display: inline-block;
   vertical-align: middle;
-  height: 20px;
   margin-right: 8px;
-  width: 20px;
 }
 
 .doc .admonitionblock .icon .icon-important::before {
   background-image: url("../img/flag-filled.svg");
   background-repeat: no-repeat;
-  background-size: 20px 20px;
   content: "";
   display: inline-block;
   vertical-align: middle;
-  height: 20px;
   margin-right: 8px;
-  width: 20px;
 }
 
 .doc .admonitionblock .icon .icon-tip::before {
   background-image: url("../img/tip-outlined.svg");
   background-repeat: no-repeat;
-  background-size: 20px 20px;
   content: "";
   display: inline-block;
   vertical-align: middle;
-  height: 20px;
   margin-right: 8px;
-  width: 20px;
+}
+
+.doc .admonitionblock .icon .icon-warning::before,
+.doc .admonitionblock .icon .icon-tip::before,
+.doc .admonitionblock .icon .icon-caution::before,
+.doc .admonitionblock .icon .icon-important::before,
+.doc .admonitionblock .icon .icon-caution::before {
+  width: 22px;
+  height: 22px;
+  background-size: 22px 22px;
 }
 
 .doc .admonitionblock.tip td.content {
