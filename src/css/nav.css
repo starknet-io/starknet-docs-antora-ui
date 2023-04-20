@@ -356,6 +356,7 @@ html.is-clipped--nav {
 .nav-list > .nav-item[data-depth="1"]:not(.is-current-page) > a,
 .nav-list > .parent[data-depth="1"]:not(.is-current-page) > span > a {
   color: var(--nav-heading-fc);
+  font-weight: 600;
 }
 
 .nav-list > .is-active.nav-item[data-depth="1"]:not(.is-current-page) > span,
