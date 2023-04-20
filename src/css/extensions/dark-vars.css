@@ -40,7 +40,7 @@
   /* nav */
   --nav-background: var(--color-zodiac-blue);
   --nav-selected-bg: #46587C;
-  --nav-selected-fc: var(--color-dark-accent-content);
+  --nav-selected-fc: #fff;
   --nav-selected-icon-bg: var(--color-dark-accent-content);
   --nav-secondary-background: var(--color-black);
   --nav-muted-color: var(--color-athens-white);
