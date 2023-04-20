@@ -1,8 +1,9 @@
 :root {
   --nav-background: var(--body-background);
-  --nav-selected-bg: #FFF2EB;
+  --nav-selected-bg: #AFCAFF;
+  --nav-current-item-color: #000;
   --nav-selected-icon-bg: var(--color-light-accent-content);
-  --nav-selected-fc: var(--color-light-accent-content);
+  --nav-selected-fc: var(--nav-current-item-color);
   --nav-secondary-background: var(--color-athens-white);
   --nav-heading-fc: var(--color-jet-60);
   --nav-fc: var(--color-gray-80);
@@ -17,12 +18,13 @@
   /* fonts */
   --body-font-color: var(--color-black);
   /* doc */
-  --heading-font-color: #28286E;
+  --heading-font-color: #0C0C4F;
   --link-font-color: var(--color-ultramarine-blue);
-  --link_hover-font-color: #a93718;
+  --link_hover-font-color: #2160DA;
   --link_unresolved-font-color: #C507E4;
   --caption-font-color: var(--color-ink-blue);
-  --color-light-accent-content: #C34624;
+  --color-light-accent-content: #2C6FF2;
+  --color-light-accent-secondary: #363636;
   --color-light-accent-tertiary: #666D7A;
   --color-border-primary: #CCCCCC;
   --primary-border: #DBDBDB;

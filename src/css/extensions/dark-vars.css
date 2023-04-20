@@ -3,6 +3,7 @@
   --body-background: var(--color-primary-dark);
   --panel-background: var(--color-primary-dark);
   --panel-border-color: var(--doc-hljs-border);
+  --nav-current-item-color: #fff;
   --scrollbar-thumb-color: var(--color-dark-accent-content);
   --divider-line-color: #212127;
   /* fonts */
@@ -11,12 +12,13 @@
   --example-border-color: var(--color-second-blue);
   --heading-font-color: var(--color-white);
   --link-font-color: var(--color-ultramarine-blue);
-  --link_hover-font-color: #e6a08d;
-  --link_unresolved-font-color: #FE9E92;
+  --link_hover-font-color: #C2D6FD;
+  --link_unresolved-font-color: #C2D6FD;
   --caption-font-color: var(--color-ufo-green);
   --table-footer-background: linear-gradient(to bottom, var(--color-zodiac-blue) 0%, var(--color-black) 100%);
-  --color-dark-accent-content: #E7947E;
+  --color-dark-accent-content: #AFCAFF;
   --color-light-accent-tertiary: #838395;
+  --color-light-accent-secondary: #CCCCCC;
   --opacity-on-color: #595959;
   --primary-border: #3D3D48;
   /* toc */
@@ -37,7 +39,7 @@
   --page-version-menu-background: var(--color-black);
   /* nav */
   --nav-background: var(--color-zodiac-blue);
-  --nav-selected-bg: #312721;
+  --nav-selected-bg: #46587C;
   --nav-selected-fc: var(--color-dark-accent-content);
   --nav-selected-icon-bg: var(--color-dark-accent-content);
   --nav-secondary-background: var(--color-black);

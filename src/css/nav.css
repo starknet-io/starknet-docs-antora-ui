@@ -9,7 +9,7 @@
   visibility: hidden;
   background: var(--nav-background);
   overflow-y: auto;
-  font-family: "IBM PLEX SANS", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .nav-link,
@@ -390,7 +390,7 @@ html.is-clipped--nav {
 .is-current-page.parent > span,
 .is-current-page:not(.parent) {
   background-color: var(--nav-selected-bg);
-  color: var(--nav-selected-fc)!important;
+  color: var(--nav-current-item-color)!important;
 }
 
 .is-current-page.parent > span {
@@ -399,7 +399,7 @@ html.is-clipped--nav {
 
 .is-current-page.parent > span > a,
 .is-current-page > .nav-link {
-  color: var(--nav-selected-fc);
+  color: var(--nav-current-item-color)!important;
   font-weight: 500;
 }
 

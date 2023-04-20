@@ -66,7 +66,7 @@
 
 .doc .overview-banner > .content > .title {
   font-size: 2em !important;
-  font-family: 'IBM PLEX SANS', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .doc table.tableblock.overview-table {
@@ -206,17 +206,17 @@
 } */
 
 .starknet-logo {
-  background-image: url(../img/starkex-logo-light.svg);
+  background-image: url(../img/starknet-logo-light.svg);
   background-repeat: no-repeat;
   display: inline-block;
-  height: 30px;
+  height: 32px;
 }
 
 .starknet-logo-small {
-  background-image: url(../img/starkex-logo-light.svg);
+  background-image: url(../img/starknet-logo-light.svg);
   background-repeat: no-repeat;
   display: inline-block;
-  height: 30px;
+  height: 32px;
   width: 148px;
 }
 
@@ -308,7 +308,7 @@
 }
 
 .doc {
-  font-family: "IBM PLEX SANS", "Roboto", sans-serif;
+  font-family: "Inter", "Roboto", sans-serif;
   max-width: var(--doc-max-width--desktop);
   padding: 0 1rem 2rem;
 }

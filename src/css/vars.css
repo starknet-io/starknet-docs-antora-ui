@@ -27,8 +27,8 @@
   --body-font-size--desktop: 1em; /* 18px */
   --body-font-size--print: 0.9375em; /* 15px */
   --body-line-height: 2;
-  --heading-font-family: "IBM PLEX SANS", sans-serif;
-  --body-font-family: "IBM PLEX SANS", sans-serif;
+  --heading-font-family: "Inter", sans-serif;
+  --body-font-family: "Inter", sans-serif;
   --body-font-weight-bold: 500;
   --monospace-font-family: "Fira Code", monospace;
   --monospace-font-weight-bold: 500;

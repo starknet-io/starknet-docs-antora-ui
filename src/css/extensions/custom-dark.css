@@ -41,13 +41,13 @@
 }
 
 .starknet-logo {
-  background-image: url(../img/starkex-logo-dark.svg);
+  background-image: url(../img/starknet-logo-dark.svg);
   width: 149px;
 }
 
 .starknet-logo-small {
-  background-image: url(../img/starkex-logo-dark.svg);
-  height: 30px;
+  background-image: url(../img/starknet-logo-dark.svg);
+  height: 32px;
   width: 148px;
 }
 
@@ -205,6 +205,26 @@ footer.footer {
   background: url(../img/chevron-down-grey.svg) no-repeat center right / auto 75%;
 }
 
-.tablist>ul li {
-  color:#000000;
+.tablist li.is-selected::before {
+  content: "";
+  position: absolute;
+  bottom: -9px; /* adjust the value as needed */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-dark-accent-content);
+  z-index: 1;
+}
+
+.tablist li {
+  color: var(--color-light-accent-tertiary);
+}
+
+.tablist li.is-selected {
+  color: var(--color-light-accent-secondary);
+}
+
+.tabs .tabpanel {
+  background: #313131;
+  border: 1px solid var(--primary-border);
 }
