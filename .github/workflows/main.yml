@@ -36,12 +36,9 @@ jobs:
           mkdir -p public
           cp build/ui-bundle.zip public/ui-bundle.zip
 
-      - name: Upload ui-bundle.zip artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: ui-bundle
-          path: build/ui-bundle.zip
-
-      - name: Deploy
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.5
         if: github.ref == 'refs/heads/main'
-        run: npx gulp preview:build
+        with:
+          branch: gh-pages
+          folder: public
