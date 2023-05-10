@@ -4,19 +4,19 @@ on:
   push:
     branches:
       - main
+      - dev
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14.x'
+          node-version: '10.14.2'
 
       - name: Cache npm dependencies
         uses: actions/cache@v2
@@ -28,40 +28,20 @@ jobs:
       - name: Install dependencies
         run: npm install --quiet --no-progress --cache=.cache/npm
 
-      - name: Build and bundle
-        if: github.ref == 'refs/heads/main'
+      - name: Bundle
+        run: npx gulp bundle
+
+      - name: Prepare artifacts
         run: |
-          npm install --quiet --no-progress --cache=.cache/npm
-          node_modules/.bin/gulp bundle
+          mkdir -p public
           cp build/ui-bundle.zip public/ui-bundle.zip
 
-        artifacts:
-          paths:
-            - build/ui-bundle.zip
-            - public/ui-bundle.zip
-
-      - name: Build and bundle (dev)
-        if: github.ref != 'refs/heads/main'
-        uses: actions/cache@v2
+      - name: Upload ui-bundle.zip artifact
+        uses: actions/upload-artifact@v2
         with:
-          path: .cache/npm
-          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: ${{ runner.os }}-npm-
-        run: |
-          npm install --quiet --no-progress --cache=.cache/npm
-          node_modules/.bin/gulp bundle
+          name: ui-bundle
+          path: build/ui-bundle.zip
 
-        artifacts:
-          paths:
-            - build/ui-bundle.zip
-
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         if: github.ref == 'refs/heads/main'
-        run: |
-          npm install --quiet --no-progress --cache=.cache/npm
-          node_modules/.bin/gulp preview:build
-          cp build/ui-bundle.zip public/
-
-        artifacts:
-          paths:
-            - public
+        run: npx gulp preview:build
