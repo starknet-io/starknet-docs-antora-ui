@@ -4,19 +4,19 @@ on:
   push:
     branches:
       - main
-      - dev
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '10.14.2'
+          node-version: '14.x'
 
       - name: Cache npm dependencies
         uses: actions/cache@v2
@@ -28,20 +28,40 @@ jobs:
       - name: Install dependencies
         run: npm install --quiet --no-progress --cache=.cache/npm
 
-      - name: Bundle
-        run: npx gulp bundle
-
-      - name: Prepare artifacts
+      - name: Build and bundle
+        if: github.ref == 'refs/heads/main'
         run: |
-          mkdir -p public
+          npm install --quiet --no-progress --cache=.cache/npm
+          node_modules/.bin/gulp bundle
           cp build/ui-bundle.zip public/ui-bundle.zip
 
-      - name: Upload ui-bundle.zip artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: ui-bundle
-          path: build/ui-bundle.zip
+        artifacts:
+          paths:
+            - build/ui-bundle.zip
+            - public/ui-bundle.zip
 
-      - name: Deploy
+      - name: Build and bundle (dev)
+        if: github.ref != 'refs/heads/main'
+        uses: actions/cache@v2
+        with:
+          path: .cache/npm
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-npm-
+        run: |
+          npm install --quiet --no-progress --cache=.cache/npm
+          node_modules/.bin/gulp bundle
+
+        artifacts:
+          paths:
+            - build/ui-bundle.zip
+
+      - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main'
-        run: npx gulp preview:build
+        run: |
+          npm install --quiet --no-progress --cache=.cache/npm
+          node_modules/.bin/gulp preview:build
+          cp build/ui-bundle.zip public/
+
+        artifacts:
+          paths:
+            - public
