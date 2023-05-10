@@ -101,6 +101,18 @@
   line-height: 14px;
 }
 
+
+.doc p a code,
+.doc thead a code,
+.doc .colist > table a code
+{
+  color: var(--color-light-accent-content);
+}
+
+.nav-list > .nav-item.is-current-path > span {
+  color: var(--color-light-accent-content)!important;
+}
+
 pre {
   /* background-color: var(--color-platinum-gray); */
   padding: 0px;

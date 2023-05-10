@@ -123,6 +123,18 @@
   line-height: 14px;
 }
 
+.doc p a code,
+.doc thead a code,
+.doc .colist > table a code
+{
+  color: var(--color-dark-accent-content);
+}
+
+.nav-list > .nav-item.is-current-path > span {
+  color: var(--color-dark-accent-content)!important;
+}
+
+
 .nav-toggle.is-active {
   background-color: var(--color-white);
   -webkit-mask-image: url(../img/back.svg);

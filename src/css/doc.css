@@ -58,8 +58,8 @@
 @media screen and (min-width: 1024px) {
   .doc > h1.page:first-child {
     margin-top: 2.5rem;
-    font-size: 3rem;
-    line-height: 3.625rem;
+    font-size: 2.5rem;
+    line-height: 3rem;
   }
 }
 

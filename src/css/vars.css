@@ -69,8 +69,8 @@
   --doc-line-height: 32px;
   --doc-margin: 0 auto;
   --doc-margin--desktop: 0 2rem;
-  --doc-heading-font-weight: 700;
-  --heading-one-font-weight: 700;
+  --doc-heading-font-weight: 600;
+  --heading-one-font-weight: 600;
   --heading-font-weight: 500;
   --alt-heading-font-weight: var(--body-font-weight-bold);
   --link-font-color: #1565c0;
