@@ -31,6 +31,9 @@ jobs:
       - name: Bundle
         run: npx gulp bundle
 
+      - name: Preview build
+        run: npx gulp preview:build
+
       - name: Prepare artifacts
         run: |
           mkdir -p public
