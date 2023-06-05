@@ -243,7 +243,7 @@
   max-width: -moz-fit-content;
   max-width: fit-content;
   overflow-x: auto;
-  white-space: nowrap;
+  word-wrap: unset;
   padding-inline: 1.5rem;
   padding-block: 1.25rem;
 }
