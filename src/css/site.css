@@ -30,3 +30,4 @@
 @import "extensions/page-components.css";
 @import "extensions/algolia/theme.css";
 @import "extensions/algolia/overrides.css";
+@import "extensions/github.min.css";
