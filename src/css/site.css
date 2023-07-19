@@ -1,4 +1,3 @@
-@import "typeface-ibmplexsans.css";
 @import "typeface-roboto.css";
 @import "typeface-roboto-mono.css";
 @import "typeface-inter.css";
@@ -30,4 +29,3 @@
 @import "extensions/page-components.css";
 @import "extensions/algolia/theme.css";
 @import "extensions/algolia/overrides.css";
-@import "extensions/github.min.css";

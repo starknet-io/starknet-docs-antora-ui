@@ -1,37 +1,32 @@
 :root {
+  --navbar_hover-background: var(--color-zodiac-blue);
   /* base */
-  --body-background: var(--color-primary-dark);
-  --panel-background: var(--color-primary-dark);
-  --panel-border-color: var(--doc-hljs-border);
-  --nav-current-item-color: #fff;
-  --scrollbar-thumb-color: var(--color-dark-accent-content);
-  --divider-line-color: #212127;
+  --body-background: var(--color-zodiac-blue);
+  --panel-background: var(--color-zodiac-blue);
+  --panel-border-color: var(--color-second-blue);
+  --scrollbar-thumb-color: var(--color-ink-blue);
+  --divider-line-color: #313131;
   /* fonts */
   --body-font-color: var(--color-silver-gray);
   /* doc */
   --example-border-color: var(--color-second-blue);
   --heading-font-color: var(--color-white);
   --link-font-color: var(--color-ultramarine-blue);
-  --link_hover-font-color: #C2D6FD;
-  --link_unresolved-font-color: #C2D6FD;
+  --link_hover-font-color: var(--color-ultramarine-blue);
+  --link_unresolved-font-color: #FE9E92;
   --caption-font-color: var(--color-ufo-green);
   --table-footer-background: linear-gradient(to bottom, var(--color-zodiac-blue) 0%, var(--color-black) 100%);
-  --color-dark-accent-content: #AFCAFF;
-  --color-light-accent-tertiary: #838395;
-  --color-light-accent-secondary: #CCCCCC;
-  --opacity-on-color: #595959;
-  --primary-border: #3D3D48;
   /* toc */
-  --toc-heading-font-color: #C8C8D0;
-  --toc-font-color: var(--color-light-accent-tertiary);
+  --toc-heading-font-color: var(--color-white);
+  --toc-font-color: var(--color-gray-60);
   /* navbar */
   --navbar-background: var(--color-zodiac-blue);
-  --navbar-font-color: #C8C8D0;
-  --navbar_hover-background: var(--color-dark-background);
+  --navbar-font-color: var(--color-jet-60);
+  --navbar_hover-background: var(--color-zodiac-blue);
   --navbar-button-background: var(--color-zodiac-blue);
-  --navbar-menu-background: var(--color-dark-background);
+  --navbar-menu-background: var(--color-zodiac-blue);
   --navbar-menu-font-color: var(--body-font-color);
-  --navbar-menu_hover-background: var(--color-dark-background);
+  --navbar-menu_hover-background: var(--color-second-blue);
   --burger-menu-fc: var(--color-white);
   /* toolbar */
   --toolbar-font-color: var(--color-silver-gray);
@@ -39,27 +34,27 @@
   --page-version-menu-background: var(--color-black);
   /* nav */
   --nav-background: var(--color-zodiac-blue);
-  --nav-selected-bg: #46587C;
-  --nav-selected-fc: #fff;
-  --nav-selected-icon-bg: var(--color-dark-accent-content);
+  --nav-selected-bg: #211F1F;
+  --nav-selected-fc: #FE9E92;
+  --nav-selected-icon-bg: #FE9E92;
   --nav-secondary-background: var(--color-black);
   --nav-muted-color: var(--color-athens-white);
   --nav-panel-divider-color: var(--color-second-blue);
-  --nav-heading-fc: var(--doc-font-color);
-  --nav-fc: var(--color-light-accent-tertiary);
+  --nav-heading-fc: var(--color-white);
+  --nav-fc: var(--color-silver-gray);
   /*  footer  */
-  --footer-background: var(--color-zodiac-blue);
+  --footer-background: #0b0b0b;
   --footer-font-color: var(--color-gray-60);
   --footer-link-font-color: var(--color-gray-60);
   --footer-icon-color: var(--color-silver-gray);
   /* doc body */
-  --doc-font-color: #C8C8D0;
-  --doc-link-color: var(--color-dark-accent-content);
-  --doc-hljs-bg: #17171C;
-  --doc-hljs-border: #3D3D48;
-  --doc-hljs-default-fc: #C8C8D0;
+  --doc-font-color: var(--color-silver-gray);
+  --doc-link-color: #AFCAFF;
+  --doc-hljs-bg: #161616;
+  --doc-hljs-border: #313131;
+  --doc-hljs-default-fc: var(--color-silver-gray);
   --doc-hljs-number-color: #AFCAFF;
-  --doc-hljs-string-color: #C892FE;
+  --doc-hljs-string-color: #FE9E92;
   --adm-tip-background: #172726;
   --adm-note-background: #171C27;
   --adm-important-background: #231F1A;
@@ -71,7 +66,6 @@
   --admonition-hljs-bg: rgba(0, 0, 0, 0.65);
   /* docsearch */
   --docsearch-primary-color: #5468ff;
-  --docsearch-background: #17171C;
   --docsearch-spacing: 12px;
   --docsearch-icon-stroke-width: 1.4;
   --docsearch-highlight-color: var(--docsearch-primary-color);
@@ -100,5 +94,5 @@
   --docsearch-muted-color: var(--color-platinum-gray);
 
   /* breadcrumbs */
-  --breadcrumbs-font-color: var(--color-light-accent-tertiary);
+  --breadcrumbs-font-color: #858585;
 }
