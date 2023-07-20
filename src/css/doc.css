@@ -1163,3 +1163,12 @@
 .MathJax_Display .MathJax {
   padding-inline: 1rem;
 }
+
+/* Styles for dot headings */
+.doc .olist .title,
+.doc .ulist .title,
+div.title {
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2.8;
+}
