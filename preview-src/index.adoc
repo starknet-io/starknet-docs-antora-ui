@@ -301,6 +301,16 @@ The fog comes
 on little cat feet.
 ____
 
+== Dot heading
+
+.This is a dot heading
+
+This is a non-structural heading that you can use for the following headings:
+
+* Procedure
+* Prerequisites
+* Example
+
 == Fin
 
 That's all, folks!
