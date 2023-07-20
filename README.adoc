@@ -118,7 +118,7 @@ If you prefer to install global packages using Yarn, run this command instead:
 
 Alternately, you can use the `gulp` command that is installed by the project's dependencies.
 
-$ $(npm bin)/gulp --version
+ $(npm bin)/gulp --version
 
 For example:
 
