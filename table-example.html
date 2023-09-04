@@ -499,7 +499,7 @@ h(B)=h(&amp;\text{block_number}, \text{ global_state_root}, \text{ sequencer_add
     }
 </script>
 
-<script>  
+<script>
   function createMostPopularSearchesPlugin(){
     const popularSearchers = createQuerySuggestionsPlugin({
       searchClient,
@@ -531,7 +531,7 @@ h(B)=h(&amp;\text{block_number}, \text{ global_state_root}, \text{ sequencer_add
             },
             item({html, item}){
 
-              
+
               return (html`
                 <div class="aa-ItemWrapper" onclick=${event => onSelectSuggestion(event, item)}>
                   <div class="aa-ItemContent">
@@ -584,7 +584,7 @@ h(B)=h(&amp;\text{block_number}, \text{ global_state_root}, \text{ sequencer_add
                 searchClient,
                 queries: [
                   {
-                    indexName: "starknet-docs-dev",
+                    indexName: "starknet-docs-master",
                     query,
                     params: {
                       attributesToSnippet: ["title:8", "content:10"],
@@ -668,7 +668,7 @@ h(B)=h(&amp;\text{block_number}, \text{ global_state_root}, \text{ sequencer_add
     });
 </script>
 
-<script> 
+<script>
   const modalBreakpoint = 680;
   const modalClassname = 'aa-DetachedContainer--modal'
 
@@ -684,12 +684,13 @@ h(B)=h(&amp;\text{block_number}, \text{ global_state_root}, \text{ sequencer_add
         algoliaDetachedContainer.classList.remove(modalClassname)
       }
   }
-    
+
   // Attaching the event listener function to window's resize event
   window.addEventListener("resize", toggleAlgoliaModal);
 
   // Calling the function for the first time
   toggleAlgoliaModal();
 
-</script>  </body>
+</script>
+  </body>
 </html>

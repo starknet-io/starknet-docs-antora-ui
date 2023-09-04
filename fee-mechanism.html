@@ -687,7 +687,7 @@ Consequently, the associated storage update fee for a transaction updating \(n\)
     }
 </script>
 
-<script>  
+<script>
   function createMostPopularSearchesPlugin(){
     const popularSearchers = createQuerySuggestionsPlugin({
       searchClient,
@@ -719,7 +719,7 @@ Consequently, the associated storage update fee for a transaction updating \(n\)
             },
             item({html, item}){
 
-              
+
               return (html`
                 <div class="aa-ItemWrapper" onclick=${event => onSelectSuggestion(event, item)}>
                   <div class="aa-ItemContent">
@@ -772,7 +772,7 @@ Consequently, the associated storage update fee for a transaction updating \(n\)
                 searchClient,
                 queries: [
                   {
-                    indexName: "starknet-docs-dev",
+                    indexName: "starknet-docs-master",
                     query,
                     params: {
                       attributesToSnippet: ["title:8", "content:10"],
@@ -856,7 +856,7 @@ Consequently, the associated storage update fee for a transaction updating \(n\)
     });
 </script>
 
-<script> 
+<script>
   const modalBreakpoint = 680;
   const modalClassname = 'aa-DetachedContainer--modal'
 
@@ -872,12 +872,13 @@ Consequently, the associated storage update fee for a transaction updating \(n\)
         algoliaDetachedContainer.classList.remove(modalClassname)
       }
   }
-    
+
   // Attaching the event listener function to window's resize event
   window.addEventListener("resize", toggleAlgoliaModal);
 
   // Calling the function for the first time
   toggleAlgoliaModal();
 
-</script>  </body>
+</script>
+  </body>
 </html>

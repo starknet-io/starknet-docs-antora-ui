@@ -510,7 +510,7 @@ message_received.emit(2, data, p)</code></pre>
     }
 </script>
 
-<script>  
+<script>
   function createMostPopularSearchesPlugin(){
     const popularSearchers = createQuerySuggestionsPlugin({
       searchClient,
@@ -542,7 +542,7 @@ message_received.emit(2, data, p)</code></pre>
             },
             item({html, item}){
 
-              
+
               return (html`
                 <div class="aa-ItemWrapper" onclick=${event => onSelectSuggestion(event, item)}>
                   <div class="aa-ItemContent">
@@ -595,7 +595,7 @@ message_received.emit(2, data, p)</code></pre>
                 searchClient,
                 queries: [
                   {
-                    indexName: "starknet-docs-dev",
+                    indexName: "starknet-docs-master",
                     query,
                     params: {
                       attributesToSnippet: ["title:8", "content:10"],
@@ -679,7 +679,7 @@ message_received.emit(2, data, p)</code></pre>
     });
 </script>
 
-<script> 
+<script>
   const modalBreakpoint = 680;
   const modalClassname = 'aa-DetachedContainer--modal'
 
@@ -695,12 +695,13 @@ message_received.emit(2, data, p)</code></pre>
         algoliaDetachedContainer.classList.remove(modalClassname)
       }
   }
-    
+
   // Attaching the event listener function to window's resize event
   window.addEventListener("resize", toggleAlgoliaModal);
 
   // Calling the function for the first time
   toggleAlgoliaModal();
 
-</script>  </body>
+</script>
+  </body>
 </html>

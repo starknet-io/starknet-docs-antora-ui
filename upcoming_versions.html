@@ -812,7 +812,7 @@ To migrate it to Cairo 1.0 and keep the same address and state, you can do the f
     }
 </script>
 
-<script>  
+<script>
   function createMostPopularSearchesPlugin(){
     const popularSearchers = createQuerySuggestionsPlugin({
       searchClient,
@@ -844,7 +844,7 @@ To migrate it to Cairo 1.0 and keep the same address and state, you can do the f
             },
             item({html, item}){
 
-              
+
               return (html`
                 <div class="aa-ItemWrapper" onclick=${event => onSelectSuggestion(event, item)}>
                   <div class="aa-ItemContent">
@@ -897,7 +897,7 @@ To migrate it to Cairo 1.0 and keep the same address and state, you can do the f
                 searchClient,
                 queries: [
                   {
-                    indexName: "starknet-docs-dev",
+                    indexName: "starknet-docs-master",
                     query,
                     params: {
                       attributesToSnippet: ["title:8", "content:10"],
@@ -981,7 +981,7 @@ To migrate it to Cairo 1.0 and keep the same address and state, you can do the f
     });
 </script>
 
-<script> 
+<script>
   const modalBreakpoint = 680;
   const modalClassname = 'aa-DetachedContainer--modal'
 
@@ -997,12 +997,13 @@ To migrate it to Cairo 1.0 and keep the same address and state, you can do the f
         algoliaDetachedContainer.classList.remove(modalClassname)
       }
   }
-    
+
   // Attaching the event listener function to window's resize event
   window.addEventListener("resize", toggleAlgoliaModal);
 
   // Calling the function for the first time
   toggleAlgoliaModal();
 
-</script>  </body>
+</script>
+  </body>
 </html>
