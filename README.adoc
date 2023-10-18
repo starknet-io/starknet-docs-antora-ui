@@ -118,7 +118,11 @@ If you prefer to install global packages using Yarn, run this command instead:
 
 Alternately, you can use the `gulp` command that is installed by the project's dependencies.
 
- $ $(npm bin)/gulp --version
+ $(npm bin)/gulp --version
+
+For example:
+
+ $ ~/.yarn/bin/gulp --version
 
 Now that you have the prerequisites installed, you can fetch and build the UI project.
 
@@ -127,8 +131,10 @@ Now that you have the prerequisites installed, you can fetch and build the UI pr
 Clone the default UI project using git:
 
 [subs=attributes+]
- $ git clone {url-project} &&
-   cd "`basename $_`"
+----
+$ git clone {url-project} &&
+cd "`basename $_`"
+----
 
 The example above clones Antora's default UI project and then switches to the project folder on your filesystem.
 Stay in this project folder when executing all subsequent commands.
@@ -159,6 +165,10 @@ To build the UI and preview it in a local web server, run the `preview` command:
 
  $ gulp preview
 
+Or
+
+ $ ~/.yarn/bin/gulp preview
+
 You'll see a URL listed in the output of this command:
 
 ....
@@ -188,6 +198,10 @@ You can point Antora at this bundle using the `--ui-bundle-url` command-line opt
 If you have the preview running, and you want to bundle without causing the preview to be clobbered, use:
 
  $ gulp bundle:pack
+
+or
+
+ $ yarn build
 
 The UI bundle will again be available at [.path]_build/ui-bundle.zip_.
 
