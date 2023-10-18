@@ -322,7 +322,9 @@
 .doc table.stripes-all > tbody > tr,
 .doc table.stripes-odd > tbody > tr:nth-of-type(odd),
 .doc table.stripes-even > tbody > tr:nth-of-type(even),
-.doc table.stripes-hover > tbody > tr:hover {
+.doc div.stripes-odd table > tbody > tr:nth-of-type(odd), /* For description lists with the role `stripes-odd` to produce table stripes on every odd row */
+.doc div.stripes-even table > tbody > tr:nth-of-type(even), /* For description lists with the role `stripes-even` to produce table stripes on every even row */
+.doc table.stripes-hover > tbody > tr:hover{
   background: var(--table-stripe-background);
 }
 
