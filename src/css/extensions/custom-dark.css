@@ -1,6 +1,6 @@
 .navbar-end .navbar-link,
 .navbar-end > .navbar-item {
-  color: var(--navbar-font-color);
+  color: var(--color-white);
 }
 
 .light-mode-label{
@@ -29,7 +29,13 @@
 }
 
 .navbar {
-  background: var(--color-dark-background);
+  background: var(--color-zodiac-blue);
+}
+
+.navbar-end .navbar-item.has-dropdown:hover .navbar-link {
+  border-left: 1px solid var(--color-second-blue);
+  border-top: 1px solid var(--color-second-blue);
+  border-right: 1px solid var(--color-second-blue);
 }
 
 .doc .sidebarblock.overview-box {
@@ -41,14 +47,8 @@
 }
 
 .starknet-logo {
-  background-image: url(../img/starknet-logo-dark.svg);
-  width: 146px;
-}
-
-.starknet-logo-small {
-  background-image: url(../img/starknet-logo-dark.svg);
-  height: 32px;
-  width: 146px;
+  background-image: url(../img/starknet-logo-white.svg);
+  width: 168px;
 }
 
 .docs-logo {
@@ -63,9 +63,12 @@
 .theme-toggle {
   background-image: url(../img/sun-light.svg);
   fill: var(--color-athens-white);
-  background-color: var(--color-dark-background);
+  background-color: var(--color-zodiac-blue);
 }
 
+.navbar-end .navbar-item .navbar-dropdown {
+  border-top: 1px solid var(--color-second-blue);
+}
 
 .theme-toggle:hover {
   /* background-image: url(../img/moon-filled.svg);
@@ -115,25 +118,15 @@
 .doc .colist > table code,
 .doc p code,
 .doc thead code {
-  background-color: var(--nav-selected-bg);
-  color: var(--nav-selected-fc);
-  font-weight: 400;
-  font-size: 14px;
-  font-family: "Fira Code";
-  line-height: 14px;
+  background-color: var(--color-jet-60);
+  color: var(--color-silver-gray);
 }
 
+.doc .colist > table a code,
 .doc p a code,
-.doc thead a code,
-.doc .colist > table a code
-{
-  color: var(--color-dark-accent-content);
+.doc thead a code {
+  color: var(--doc-link-color)!important;
 }
-
-.nav-list > .nav-item.is-current-path > span {
-  color: var(--color-dark-accent-content)!important;
-}
-
 
 .nav-toggle.is-active {
   background-color: var(--color-white);
@@ -160,17 +153,9 @@ footer.footer {
   box-shadow: 0 0 0 1px #313131;
 }
 
+.doc table.tableblock,
 .doc table.tableblock > * > tr > * {
-  border-color: var(--primary-border);
-}
-
-.doc table.tableblock {
-  border-color: var(--opacity-on-color);
-}
-
-.doc table.tableblock tr:first-child td {
-  border-top: none;
-  border-bottom: var(--opacity-on-color)!important;
+  border-color: #313131;
 }
 
 .components-versions {
@@ -217,26 +202,6 @@ footer.footer {
   background: url(../img/chevron-down-grey.svg) no-repeat center right / auto 75%;
 }
 
-.tablist li.is-selected::before {
-  content: "";
-  position: absolute;
-  bottom: -9px; /* adjust the value as needed */
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: var(--color-dark-accent-content);
-  z-index: 1;
-}
-
-.tablist li {
-  color: var(--color-light-accent-tertiary);
-}
-
-.tablist li.is-selected {
-  color: var(--color-light-accent-secondary);
-}
-
-.tabs .tabpanel {
-  background: #313131;
-  border: 1px solid var(--primary-border);
+.tablist>ul li {
+  color:#000000;
 }

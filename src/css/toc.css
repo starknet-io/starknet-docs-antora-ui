@@ -22,11 +22,11 @@ aside.toc.embedded {
 .toc .toc-menu h3 {
   color: var(--toc-heading-font-color);
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.3;
   margin: 0;
   padding-left: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
   text-transform: uppercase;
 }
 
@@ -67,22 +67,12 @@ aside.toc.embedded {
   margin: 0;
 }
 
-.toc .toc-menu li a {
-  font-weight: 600;
-}
-
 .toc .toc-menu li[data-level="2"] a {
   padding-left: 2rem;
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
-  font-weight: 500;
 }
 
 .toc .toc-menu li[data-level="3"] a {
   padding-left: 3rem;
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
-  font-weight: 500;
 }
 
 .toc .toc-menu a {
@@ -121,12 +111,13 @@ aside.toc.embedded {
 }
 
 .toc .toc-menu a:hover {
-  color: var(--link_hover-font-color);
+  color: var(--link-font-color);
 }
 
 .toc .toc-menu a.is-active {
   /* border-left-color: var(--link-font-color); */
   color: var(--doc-link-color);
+  font-weight: 500;
 }
 
 .sidebar.toc .toc-menu a:focus {
