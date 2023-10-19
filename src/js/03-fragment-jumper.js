@@ -18,7 +18,7 @@
       window.location.hash = '#' + this.id
       e.preventDefault()
     }
-    window.scrollTo(0, computePosition(this, 0) - toolbar.getBoundingClientRect().bottom)
+    window.scrollTo(0, computePosition(this, 0))
   }
 
   window.addEventListener('load', function jumpOnLoad (e) {
