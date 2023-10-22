@@ -42,6 +42,7 @@
     "gulp-vinyl-zip": "~2.2",
     "handlebars": "~4.7",
     "highlight.js": "11.4.0",
+    "highlightjs-cairo": "^0.2.0",
     "js-yaml": "~3.13",
     "merge-stream": "~2.0",
     "postcss-calc": "~7.0",
