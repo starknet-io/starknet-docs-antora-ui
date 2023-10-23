@@ -16,6 +16,8 @@
   --link_unresolved-font-color: #FE9E92;
   --caption-font-color: var(--color-ufo-green);
   --table-footer-background: linear-gradient(to bottom, var(--color-zodiac-blue) 0%, var(--color-black) 100%);
+  --table-stripe-background: var(--color-gray-70);
+  --desc-list-stripe-background: var(--color-gray-70);
   /* toc */
   --toc-heading-font-color: var(--color-white);
   --toc-font-color: var(--color-gray-60);

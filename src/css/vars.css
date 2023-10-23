@@ -95,8 +95,9 @@
   --quote-attribution-font-color: var(--color-gray-30);
   --sidebar-background: var(--color-smoke-90);
   --table-border-color: var(--panel-border-color);
-/*  --table-stripe-background: var(--panel-background); */
-  --table-stripe-background: #ebf2ff;
+  --table-stripe-background: var(--panel-background);
+  /*--table-stripe-background: #ebf2ff; */
+  --desc-list-stripe-background: var(--color-smoke-70);
   --table-footer-background: linear-gradient(to bottom, var(--color-smoke-70) 0%, var(--color-white) 100%);
   /* toc */
   --toc-border-color: var(--panel-border-color);
