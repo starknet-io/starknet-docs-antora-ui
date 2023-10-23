@@ -131,8 +131,10 @@ Now that you have the prerequisites installed, you can fetch and build the UI pr
 Clone the default UI project using git:
 
 [subs=attributes+]
+----
 $ git clone {url-project} &&
 cd "`basename $_`"
+----
 
 The example above clones Antora's default UI project and then switches to the project folder on your filesystem.
 Stay in this project folder when executing all subsequent commands.
