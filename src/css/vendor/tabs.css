@@ -9,13 +9,11 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-bottom: 14px;
-  padding-bottom: 8px;
 }
 
 .tablist > ul li {
   align-items: center;
-  border: none;
+  background-color: #fff;
   cursor: pointer;
   display: flex;
   font-weight: bold;
@@ -30,19 +28,16 @@
 
 .tablist.ulist,
 .tablist.ulist > ul li {
-  margin-top: 12px;
-}
-
-.tabs .listingblock {
-  margin-top: 0!important;
-}
-
-.tabs .tabpanel {
-  border-radius: 0.75rem;
+  margin-top: 20px;
 }
 
 .tablist.ulist > ul li + li {
   margin-left: 0.25em;
+}
+
+.tabs.is-loading .tablist li:not(:first-child),
+.tabs:not(.is-loading) .tablist li:not(.is-selected) {
+  background-color: #f5f5f5;
 }
 
 .tabs.is-loading .tablist li:first-child::after,
@@ -67,6 +62,7 @@
   padding: 1.25em;
 }
 
+.tablist > ul li,
 .tabpanel {
   border: 1px solid #dcdcdc;
 }

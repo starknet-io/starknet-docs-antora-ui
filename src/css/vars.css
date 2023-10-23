@@ -20,14 +20,12 @@
   --color-jet-70: #222;
   --color-jet-80: #191919;
   --color-black: #000;
-  /* new colors */
   /* fonts */
   --rem-base: 18; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
   --body-font-size: 1em; /* 17px */
   --body-font-size--desktop: 1em; /* 18px */
   --body-font-size--print: 0.9375em; /* 15px */
   --body-line-height: 2;
-  --heading-font-family: "Inter", sans-serif;
   --body-font-family: "Inter", sans-serif;
   --body-font-weight-bold: 500;
   --monospace-font-family: "Fira Code", monospace;
@@ -35,9 +33,9 @@
   /* base */
   --body-background: var(--color-smoke-80);
   --panel-background: var(--color-smoke-30);
-  --panel-border-color: var(--panel-border-color);
-  --scrollbar-thumb-color: var(--color-light-accent-content);
-  --divider-line-color: #EFEFEF;
+  --panel-border-color: var(--divider-line-color);
+  --scrollbar-thumb-color: var(--color-gray-10);
+  --divider-line-color: #efefef;
   /* navbar */
   --navbar-background: var(--color-jet-80);
   --navbar-font-color: var(--color-white);
@@ -45,7 +43,7 @@
   --navbar-button-background: var(--color-white);
   --navbar-button-border-color: var(--panel-border-color);
   --navbar-button-font-color: var(--body-font-color);
-  --navbar-menu-border-color: var(--divider-line-color);
+  --navbar-menu-border-color: var(--panel-border-color);
   --navbar-menu-background: var(--color-white);
   --navbar-menu-font-color: var(--color-jet-60);
   --navbar-menu_hover-background: var(--color-smoke-50);
@@ -66,11 +64,11 @@
   /* doc */
   --doc-font-size: inherit;
   --doc-font-size--desktop: calc(17 / var(--rem-base) * 1rem);
-  --doc-line-height: 32px;
+  --doc-line-height: 2;
   --doc-margin: 0 auto;
   --doc-margin--desktop: 0 2rem;
-  --doc-heading-font-weight: 600;
-  --heading-one-font-weight: 600;
+  --doc-heading-font-weight: 700;
+  --heading-one-font-weight: 700;
   --heading-font-weight: 500;
   --alt-heading-font-weight: var(--body-font-weight-bold);
   --link-font-color: #1565c0;
@@ -80,7 +78,6 @@
   --abstract-border-color: var(--panel-border-color);
   --admonition-background: var(--panel-background);
   --admonition-label-font-weight: 700;
-  --admonition-color: #000;
   --caption-font-color: var(--color-gray-70);
   --caption-font-weight: var(--body-font-weight-bold);
   --code-background: var(--panel-background);
@@ -125,7 +122,7 @@
   --toc-width: 12rem;
   --toc-width--widescreen: 15rem;
   --doc-max-width: calc(720 / var(--rem-base) * 1rem);
-  --doc-max-width--desktop: 52rem;
+  --doc-max-width--desktop: 72rem;
   /* stacking */
   --z-index-nav: 1;
   --z-index-nav-mobile: 11;
