@@ -341,6 +341,7 @@
 .doc table.stripes-odd > tbody > tr:nth-of-type(odd) > td,
 .doc table.stripes-even > tbody > tr:nth-of-type(even) > td {
   border-radius: 0rem;
+}
 
 .doc table.tableblock > tfoot {
   background: var(--table-footer-background);
