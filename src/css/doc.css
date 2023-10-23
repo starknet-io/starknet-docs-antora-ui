@@ -323,6 +323,21 @@
 .doc table.stripes-hover > tbody > tr:hover {
   background: var(--table-stripe-background);
 }
+.doc div.stripes-odd table > tbody > tr:nth-of-type(odd), /* For description lists with the role `stripes-odd` to produce table stripes on every odd row */
+.doc div.stripes-even table > tbody > tr:nth-of-type(even) {/* For description lists with the role `stripes-even` to produce table stripes on every even row */
+  background: var(--color-smoke-70);
+}
+
+.doc div.stripes-odd table > tbody > tr:nth-of-type(even), /* For description lists with the role `stripes-odd` to produce table stripes on every odd row */
+.doc div.stripes-even table > tbody > tr:nth-of-type(odd) {/* For description lists with the role `stripes-even` to produce table stripes on every even row */
+  background: var(--panel-background);
+}
+
+/* This style removes 0.5 rem radium from table cells when table stripes are enabled */
+.doc table.stripes-all > tbody > tr > td,
+.doc table.stripes-odd > tbody > tr:nth-of-type(odd) > td,
+.doc table.stripes-even > tbody > tr:nth-of-type(even) > td {
+  border-radius: 0rem;
 
 .doc table.tableblock > tfoot {
   background: var(--table-footer-background);
