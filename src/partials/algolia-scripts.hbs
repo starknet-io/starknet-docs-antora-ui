@@ -105,7 +105,7 @@
     }
 </script>
 
-<script>  
+<script>
   function createMostPopularSearchesPlugin(){
     const popularSearchers = createQuerySuggestionsPlugin({
       searchClient,
@@ -137,7 +137,7 @@
             },
             item({html, item}){
 
-              
+
               return (html`
                 <div class="aa-ItemWrapper" onclick=${event => onSelectSuggestion(event, item)}>
                   <div class="aa-ItemContent">
@@ -191,7 +191,7 @@
                 searchClient,
                 queries: [
                   {
-                    indexName: "starknet-docs-dev",
+                    indexName: "starknet-docs-master",
                     query,
                     params: {
                       attributesToSnippet: ["title:8", "content:10"],
@@ -280,7 +280,7 @@
 </script>
 
 {{!-- --aa-detached-modal-media-query is not working as expected. So we have to toggle modal classname manually --}}
-<script> 
+<script>
   const modalBreakpoint = 680;
   const modalClassname = 'aa-DetachedContainer--modal'
 
@@ -296,7 +296,7 @@
         algoliaDetachedContainer.classList.remove(modalClassname)
       }
   }
-    
+
   // Attaching the event listener function to window's resize event
   window.addEventListener("resize", toggleAlgoliaModal);
 
