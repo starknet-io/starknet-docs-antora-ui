@@ -1,7 +1,5 @@
 :root {
-  --color-zodiac-blue: #131316;
-  --color-primary-dark: #131316;
-  --color-dark-background: #1C1C21;
+  --color-zodiac-blue: #121212;
   --color-second-blue: #363f55;
   --color-ink-blue: #254898;
   --color-ultramarine-blue: #4070f4;
@@ -12,7 +10,7 @@
   --rgb-copacabana-yellow: 247, 227, 109;
   --color-blue-gray: #8a8ca2;
   --rgb-blue-gray: 138, 140, 162;
-  --color-silver-gray: #DBDBDB;
+  --color-silver-gray: #cccccc;
   --rgb-silver-gray: 197, 207, 228;
   --color-platinum-gray: #dfe6f2;
   --color-athens-white: #f7f9fb;
@@ -21,14 +19,13 @@
   --color-fury-red: #ff4557;
   --rgb-fury-red: 255, 69, 87;
   --color-orange: #ff8743;
-  --color-dark-accent-content: #312721;
   --rgb-orange: 255, 135, 67;
   --navbar-height: calc(88 / var(--rem-base) * 1rem);
   --nav-width: calc(324 / var(--rem-base) * 1rem);
-  --body-font-family: "Inter", "Roboto", sans-serif;
+  --body-font-family: "Inter", sans-serif;
   --nav-height--desktop: calc(var(--body-min-height) - var(--toolbar-height));
   --doc-font-size--desktop: calc(18 / var(--rem-base) * 1rem);
-  --doc-line-height: 1.9;
+  --doc-line-height: 2;
   --heading-one-font-weight: 700;
   --heading-font-weight: 500;
 }

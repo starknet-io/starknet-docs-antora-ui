@@ -22,10 +22,6 @@
   flex-flow: nowrap;
 }
 
-.tabs ul {
-  border-bottom: 1px solid var(--primary-border);
-}
-
 .tabs.ulist li {
   margin-bottom: 0;
   color: var(--color-blue-gray);

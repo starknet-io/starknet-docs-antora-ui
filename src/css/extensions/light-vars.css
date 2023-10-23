@@ -1,36 +1,29 @@
 :root {
   --nav-background: var(--body-background);
-  --nav-selected-bg: #AFCAFF;
-  --nav-current-item-color: #000;
-  --nav-selected-icon-bg: var(--color-light-accent-content);
-  --nav-selected-fc: var(--nav-current-item-color);
+  --nav-selected-bg: #EBF2FF;
+  --nav-selected-icon-bg: #5C94FF;
+  --nav-selected-fc: #0C0C4F;
   --nav-secondary-background: var(--color-athens-white);
   --nav-heading-fc: var(--color-jet-60);
   --nav-fc: var(--color-gray-80);
 
   /* navbar */
   --navbar_hover-background: var(--color-white);
-  --navbar-font-color: #363636;
+  --navbar-font-color: var(--color-jet-60);
   --page-version-menu-background: var(--color-athens-white);
   --panel-background: var(--color-athens-white);
-  --panel-border-color: var(--color-border-primary);
   --burger-menu-fc: var(--color-jet-60);
   /* fonts */
   --body-font-color: var(--color-black);
   /* doc */
-  --heading-font-color: #0C0C4F;
+  --heading-font-color: #0c0c4f;
   --link-font-color: var(--color-ultramarine-blue);
-  --link_hover-font-color: #2160DA;
+  --link_hover-font-color: var(--color-ultramarine-blue);
   --link_unresolved-font-color: #C507E4;
   --caption-font-color: var(--color-ink-blue);
-  --color-light-accent-content: #2C6FF2;
-  --color-light-accent-secondary: #363636;
-  --color-light-accent-tertiary: #666D7A;
-  --color-border-primary: #CCCCCC;
-  --primary-border: #DBDBDB;
 
   /* toc */
-  --toc-heading-font-color: #363636;
+  --toc-heading-font-color: var(--heading-font-color);
   --toc-font-color: var(--color-gray-80);
   /*  footer  */
   --footer-background: var(--body-background);
@@ -39,8 +32,8 @@
   --footer-icon-color: #1B1B1B;
   /* doc body */
   --doc-font-color: var(--color-jet-60);
-  --doc-link-color: var(--color-light-accent-content);
-  --doc-hljs-bg: #F0F0F0;
+  --doc-link-color: #5C94FF;
+  --doc-hljs-bg: #F6F6F6;
   --doc-hljs-border: var(--color-silver-gray);
   --doc-hljs-default-fc: var(--color-jet-60);
   --doc-hljs-number-color: #2266EF;
@@ -55,7 +48,6 @@
   --adm-warning-border: 1px solid #E7D5D4;
   --admonition-hljs-bg: rgba(255, 255, 255, 0.75);
   /* docsearch */
-  --docsearch-background: #F0F0F0;
   --docsearch-primary-color: #5468ff;
   --docsearch-text-color: #1c1e21;
   --docsearch-spacing: 12px;
@@ -84,5 +76,5 @@
   --docsearch-footer-shadow: 0 -1px 0 0 #e0e3e8, 0 -3px 6px 0 rgba(69, 98, 155, 0.12);
 
   /* breadcrumbs */
-  --breadcrumbs-font-color: var(--color-light-accent-tertiary);
+  --breadcrumbs-font-color: #6B7280;
 }
