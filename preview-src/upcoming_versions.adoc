@@ -72,11 +72,11 @@ The following is an example of the new version of the `DECLARE` transaction:
 Upon receiving a `DECLARE v2` transaction, the sequencer will run `&lowbar;&lowbar;validate&lowbar;declare&lowbar;&lowbar;` (similarly to version 1).
 If the transaction is found valid, the sequencer will compile the contract class to Casm and ensure that the resulting compiled class hash equals the given `compiled_class_hash`.
 If the hashes do not match, the sequencer is eligible to charge a fee for the transaction (this is necessary to prevent a potential DOS on the sequencer).
-If the validation was success and the compilation resulted in a matching compiled class hash, the sequencer proceeds to store the given class in its DB and updates the classes tree with the `(class_hash, compiled_class_hash)` pair.
+If the validation was successful and the compilation resulted in a matching compiled class hash, the sequencer proceeds to store the given class in its DB and updates the classes tree with the `(class_hash, compiled_class_hash)` pair.
 
 ### Deploy and library_call
 
-After the class was declared, it can be used either in deploying new instances or via library calls. Note that to specify the class (either for deploy or library_call), one has to send `class_hash` and **NOT** `compiled_class_hash`. The sequencer and full nodes may internally maintain a mapping between the two, but a reference to a declared class has to be via its class hash.
+After the class is declared, it can be used either in deploying new instances or via library calls. Note that to specify the class (either for deploy or library_call), one has to send `class_hash` and **NOT** `compiled_class_hash`. The sequencer and full nodes may internally maintain a mapping between the two, but a reference to a declared class has to be via its class hash.
 
 ## State commitment
 
@@ -98,7 +98,7 @@ We add a new system call that allows changing a contract’s class to a Cairo 1.
 
 Once `replace_class` is called, the class of the calling contract
 (i.e. the contract whose address is returned by `get_contract_address` at the time the syscall is called)
-will be replaced by class whose hash is given by the `class_hash` argument (this class must be previously declared).
+will be replaced by a class whose hash is given by the `class_hash` argument (this class must be previously declared).
 **This change will not affect the currently running function**, i.e. the execution of the calling function will continue as usual with the old code.
 However, `call_contract` will now use the new class.
 
@@ -133,7 +133,7 @@ The `swap` function calls `get_price` three times:
 
 The following flow is only applicable to upgradable contracts.
 If your contract is upgradable, then upgrading the implementation class to Cairo 1.0 doesn’t require anything new,
-and can be done with a regular transaction which upgrades the implementation.
+and can be done with a regular transaction that upgrades the implementation.
 
 The problem is thus “upgrading” the proxy itself to the Cairo 1.0 implementation.
 Suppose that you have an account proxy, or a DeFi app proxy, that you want to migrate to Cairo 1.0.
@@ -146,7 +146,7 @@ To migrate it to Cairo 1.0 and keep the same address and state, you can do the f
 
 ### FAQ
 
-* Will I be able to replace the class to any previously declared class?
+* Will I be able to replace the class with any previously declared class?
 	** You will only be able to use it in order to transition to Cairo 1.0 classes.
 * Can I only use it for proxy contracts?
     ** No, we will not enforce anything about the contents of the old/new class, other than the new class being Cairo 1.0 compatible.
