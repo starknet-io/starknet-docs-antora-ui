@@ -21,7 +21,7 @@
 
 image:{img-ci-status}[CI Status (GitLab CI), link={url-ci-pipelines}]
 
-This project is an archetype that demonstrates how to produce a UI bundle that can be used by {url-antora}[Antora] to generated a documentation site.
+This project is an archetype that demonstrates how to produce a UI bundle that can be used by {url-antora}[Antora] to generate a documentation site.
 You can see a preview of the default UI at {url-preview}.
 
 While the default UI is ready to be used with Antora, the intent is that you'll fork it and customize it for your own needs.
@@ -116,7 +116,7 @@ If you prefer to install global packages using Yarn, run this command instead:
 
  $ yarn global add gulp-cli
 
-Alternately, you can use the `gulp` command that is installed by the project's dependencies.
+Alternatively, you can use the `gulp` command that is installed by the project's dependencies.
 
  $ (npm bin)/gulp --version
 
@@ -145,7 +145,7 @@ In your terminal, execute the following command:
  $ npm install
 
 This command installs the dependencies listed in [.path]_package.json_ into the [.path]_node_modules/_ folder inside the project.
-This folder does not get included in the UI bundle and should _not_ be committed to the source control repository.
+This folder is not get included in the UI bundle and should _not_ be committed to the source control repository.
 
 [TIP]
 ====
@@ -157,7 +157,7 @@ If you prefer to install packages using Yarn, run this command instead:
 === Preview the UI
 
 The default UI project is configured to preview offline.
-The files in the [.path]_preview-src/_ folder provide the sample content that allow you to see the UI in action.
+The files in the [.path]_preview-src/_ folder provide the sample content that allows you to see the UI in action.
 In this folder, you'll primarily find pages written in AsciiDoc.
 These pages provide a representative sample and kitchen sink of content from the real site.
 
