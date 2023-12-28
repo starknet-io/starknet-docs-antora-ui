@@ -725,6 +725,98 @@ on little cat feet.</pre>
 </li>
 </ul>
 </div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Encoding of <a href="../Smart_Contracts/class-hash.html">the class hash</a>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Encoding of the compiled class hash of the declared class.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="callouts-in-code-examples"><a class="anchor" href="#callouts-in-code-examples"></a>Callouts in code examples</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">[
+  1, <i class="conum" data-value="1"></i><b>(1)</b>
+  2019172390095051323869047481075102003731246132997057518965927979101413600827, <i class="conum" data-value="2"></i><b>(2)</b>
+  18446744073709551617, <i class="conum" data-value="3"></i><b>(3)</b>
+  100, <i class="conum" data-value="4"></i><b>(4)</b>
+  200, <i class="conum" data-value="4"></i><b>(4)</b>
+  1, <i class="conum" data-value="5"></i><b>(5)</b>
+  1351148242645005540004162531550805076995747746087542030095186557536641755046, <i class="conum" data-value="6"></i><b>(6)</b>
+  558404273560404778508455254030458021013656352466216690688595011803280448032 <i class="conum" data-value="7"></i><b>(7)</b>
+smile <i class="conum" data-value="8"></i><b>(8)</b>
+]</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The first element, <code>1</code>, is the number of contracts whose state was updated.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The second element, <code>2019172390095051323869047481075102003731246132997057518965927979101413600827</code>, is the address of the first, and only, contract whose state changed.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>The third element, <code>18446744073709551617</code>, which is 2<sup>64</sup>+1, encodes the following:
+<div class="ulist">
+<ul>
+<li>
+<p>The class information flag is <code>0</code>, that is, the contract was not deployed or replaced just now, so you shouldn&#8217;t treat the next word as the class hash.</p>
+</li>
+<li>
+<p>The new nonce is <code>1</code>.</p>
+</li>
+<li>
+<p>One storage cell was updated.</p>
+</li>
+</ul>
+</div></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>The next two elements, <code>100</code> and <code>200</code>, encode the storage update, where the value of key <code>100</code> is set to <code>200</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>the new declare section: <code>1</code> includes a single <a href="Network_Architecture/transactions.html#declare_v2">declare v2</a> transaction in this state update.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>text</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="system-call"><a class="anchor" href="#system-call"></a>System call</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="get_block_hash"><a class="anchor" href="#get_block_hash"></a><code>get_block_hash</code></h2>
+<div class="sectionbody">
+<h3 id="syntax" class="discrete">Syntax</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cairo hljs" data-lang="cairo">extern fn get_block_hash_syscall(
+    block_number: u64
+) -&gt; SyscallResult&lt;felt252&gt; implicits(GasBuiltin, System) nopanic;</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
