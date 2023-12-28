@@ -28,7 +28,13 @@
   --body-line-height: 2;
   --body-font-family: "Inter", sans-serif;
   --body-font-weight-bold: 500;
-  --monospace-font-family: "Fira Code", monospace;
+  --monospace-font-family: Roboto Mono,monospace;
+/* Disabled Fira Code because it was showing -> as an arrow,
+Which is actually the purpose of Fira Code. But that means that
+our code examples incorrectly show that you should use an arrow in Cairo code
+instead of ->.
+Leaving this here for now for historical purposes. */
+  /*--monospace-font-family: "Fira Code", monospace; */
   --monospace-font-weight-bold: 500;
   /* base */
   --body-background: var(--color-smoke-80);
