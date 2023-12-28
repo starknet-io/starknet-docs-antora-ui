@@ -116,6 +116,9 @@ page:
     - content: Table example
       url: /xyz/5.2/table-example.html
       urlType: internal
+    - content: Function reference
+      url: /xyz/5.2/starkgate_function_reference.html
+      urlType: internal
     - content: Token bridge
       url: /xyz/5.2/token-bridge.html
       urlType: internal
