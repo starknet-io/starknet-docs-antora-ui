@@ -338,13 +338,13 @@
 <p>Upon receiving a <code>DECLARE v2</code> transaction, the sequencer will run <code>&lowbar;&lowbar;validate&lowbar;declare&lowbar;&lowbar;</code> (similarly to version 1).
 If the transaction is found valid, the sequencer will compile the contract class to Casm and ensure that the resulting compiled class hash equals the given <code>compiled_class_hash</code>.
 If the hashes do not match, the sequencer is eligible to charge a fee for the transaction (this is necessary to prevent a potential DOS on the sequencer).
-If the validation was success and the compilation resulted in a matching compiled class hash, the sequencer proceeds to store the given class in its DB and updates the classes tree with the <code>(class_hash, compiled_class_hash)</code> pair.</p>
+If the validation was successful and the compilation resulted in a matching compiled class hash, the sequencer proceeds to store the given class in its DB and updates the classes tree with the <code>(class_hash, compiled_class_hash)</code> pair.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_deploy_and_library_call"><a class="anchor" href="#_deploy_and_library_call"></a>Deploy and library_call</h3>
 <div class="paragraph">
-<p>After the class was declared, it can be used either in deploying new instances or via library calls. Note that to specify the class (either for deploy or library_call), one has to send <code>class_hash</code> and <strong>NOT</strong> <code>compiled_class_hash</code>. The sequencer and full nodes may internally maintain a mapping between the two, but a reference to a declared class has to be via its class hash.</p>
+<p>After the class is declared, it can be used either in deploying new instances or via library calls. Note that to specify the class (either for deploy or library_call), one has to send <code>class_hash</code> and <strong>NOT</strong> <code>compiled_class_hash</code>. The sequencer and full nodes may internally maintain a mapping between the two, but a reference to a declared class has to be via its class hash.</p>
 </div>
 </div>
 </div>
@@ -386,7 +386,7 @@ To this end, we change the state commitment from <code>global_tree_root</code> t
 <div class="paragraph">
 <p>Once <code>replace_class</code> is called, the class of the calling contract
 (i.e. the contract whose address is returned by <code>get_contract_address</code> at the time the syscall is called)
-will be replaced by class whose hash is given by the <code>class_hash</code> argument (this class must be previously declared).
+will be replaced by a class whose hash is given by the <code>class_hash</code> argument (this class must be previously declared).
 <strong>This change will not affect the currently running function</strong>, i.e. the execution of the calling function will continue as usual with the old code.
 However, <code>call_contract</code> will now use the new class.</p>
 </div>
@@ -435,7 +435,7 @@ get_price(assetId: felt)
 <div class="paragraph">
 <p>The following flow is only applicable to upgradable contracts.
 If your contract is upgradable, then upgrading the implementation class to Cairo 1.0 doesn’t require anything new,
-and can be done with a regular transaction which upgrades the implementation.</p>
+and can be done with a regular transaction that upgrades the implementation.</p>
 </div>
 <div class="paragraph">
 <p>The problem is thus “upgrading” the proxy itself to the Cairo 1.0 implementation.
@@ -464,7 +464,7 @@ To migrate it to Cairo 1.0 and keep the same address and state, you can do the f
 <div class="ulist">
 <ul>
 <li>
-<p>Will I be able to replace the class to any previously declared class?</p>
+<p>Will I be able to replace the class with any previously declared class?</p>
 <div class="ulist">
 <ul>
 <li>
