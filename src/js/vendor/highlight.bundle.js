@@ -1,7 +1,7 @@
 ;(function () {
   'use strict'
 
-  const hljs = require('highlight.js');
+  const hljs = require('highlight.js/lib/highlight.js');
   const hljsDefineCairo = require('highlightjs-cairo');  // Require the highlightjs-cairo module
 
   hljs.registerLanguage('asciidoc', require('highlight.js/lib/languages/asciidoc'))
