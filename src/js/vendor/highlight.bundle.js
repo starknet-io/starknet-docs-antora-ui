@@ -1,9 +1,9 @@
 ;(function () {
   'use strict'
 
-  const hljs = require('highlight.js/lib/highlight.js');
-  const hljsDefineCairo = require('highlightjs-cairo');  // Require the highlightjs-cairo module
+  const hljsDefineCairo = require('highlightjs-cairo'); // Require the highlightjs-cairo module
 
+  var hljs = require('highlight.js/lib/highlight')
   hljs.registerLanguage('asciidoc', require('highlight.js/lib/languages/asciidoc'))
   hljs.registerLanguage('bash', require('highlight.js/lib/languages/bash'))
   hljs.registerLanguage('clojure', require('highlight.js/lib/languages/clojure'))
@@ -37,9 +37,7 @@
   hljs.registerLanguage('xml', require('highlight.js/lib/languages/xml'))
   hljs.registerLanguage('yaml', require('highlight.js/lib/languages/yaml'))
   hljsDefineCairo(hljs);  // Use the highlightjs-cairo module to define Cairo in hljs
-  const highlighted = hljs.highlight('cairo', source).value;
-
-  ;[].slice.call(document.querySelectorAll('pre code.hljs')).forEach(function (node) {
-    hljs.highlightElement(node)
+  ;[].slice.call(document.querySelectorAll('pre code.hljs[data-lang]')).forEach(function (node) {
+    hljs.highlightBlock(node)
   })
 })()
