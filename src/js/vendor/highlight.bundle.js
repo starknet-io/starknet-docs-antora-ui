@@ -2,6 +2,7 @@
   'use strict'
 
   const hljsDefineCairo = require('highlightjs-cairo'); // Require the highlightjs-cairo module
+  const hljsDefineSolidity = require('highlightjs-solidity'); // Require the highlightjs-solidity module
 
   var hljs = require('highlight.js/lib/highlight')
   hljs.registerLanguage('asciidoc', require('highlight.js/lib/languages/asciidoc'))
@@ -37,6 +38,7 @@
   hljs.registerLanguage('xml', require('highlight.js/lib/languages/xml'))
   hljs.registerLanguage('yaml', require('highlight.js/lib/languages/yaml'))
   hljsDefineCairo(hljs);  // Use the highlightjs-cairo module to define Cairo in hljs
+  hljsDefineSolidity(hljs);  // Use the highlightjs-solidity module to define Solidity in hljs
   ;[].slice.call(document.querySelectorAll('pre code.hljs[data-lang]')).forEach(function (node) {
     hljs.highlightBlock(node)
   })

@@ -4085,6 +4085,11 @@
   "resolved" "https://registry.npmjs.org/highlightjs-cairo/-/highlightjs-cairo-0.4.0.tgz"
   "version" "0.4.0"
 
+"highlightjs-solidity@^2.0.6":
+  "integrity" "sha512-DySXWfQghjm2l6a/flF+cteroJqD4gI8GSdL4PtvxZSsAHie8m3yVe2JFoRg03ROKT6hp2Lc/BxXkqerNmtQYg=="
+  "resolved" "https://registry.npmjs.org/highlightjs-solidity/-/highlightjs-solidity-2.0.6.tgz"
+  "version" "2.0.6"
+
 "hmac-drbg@^1.0.1":
   "integrity" "sha1-0nRXAQJabHdabFRXk+1QL8DGSaE="
   "resolved" "https://registry.npmjs.org/hmac-drbg/-/hmac-drbg-1.0.1.tgz"
