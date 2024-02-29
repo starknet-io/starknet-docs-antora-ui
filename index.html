@@ -306,6 +306,18 @@ This is an example paragraph.
 </div>
 <div class="listingblock">
 <div class="content">
+<pre class="highlightjs highlight"><code class="language-cairo hljs" data-lang="cairo">#[cfg(test)]
+mod tests {
+    #[test]
+    fn it_works() {
+        let result = 2 + 2;
+        assert!(result == 4, "result is not 4");
+    }
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
 <pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">vfs
   .src('js/vendor/*.js', { cwd: 'src', cwdbase: true, read: false })
   .pipe(tap((file) =&gt; { <i class="conum" data-value="1"></i><b>(1)</b>
