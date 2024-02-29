@@ -61,6 +61,7 @@
   },
   "dependencies": {
     "caniuse-lite": "^1.0.30001457",
-    "core-js": "^3.0.0"
+    "core-js": "^3.0.0",
+    "highlightjs-solidity": "^2.0.6"
   }
 }
