@@ -101,6 +101,8 @@
 
 .doc .colist > table code,
 .doc p code,
+.doc h2 code,
+.doc h3 code,
 .doc thead code {
   background-color: var(--nav-selected-bg);
   color: #6B7280;
