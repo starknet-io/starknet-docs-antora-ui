@@ -1533,6 +1533,8 @@ auto;
 }
 
 .doc p code,
+.doc h2 code,
+.doc h3 code,
 .doc thead code,
 .doc .colist > table code {
   color: #000;
@@ -8226,6 +8228,8 @@ footer.footer {
 
 .doc .colist > table code,
 .doc p code,
+.doc h2 code,
+.doc h3 code,
 .doc thead code {
   background-color: #EBF2FF;
   background-color: var(--nav-selected-bg);
