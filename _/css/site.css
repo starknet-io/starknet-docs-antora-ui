@@ -7937,6 +7937,14 @@ footer.footer {
   gap: 20px;
 }
 
+.footer-network-info{
+  border-radius: 0.5rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  background-color: #ffcd9a;
+  color: #000000;
+}
+
 .vertical-divider {
   width: 1px;
   height: 2rem;
