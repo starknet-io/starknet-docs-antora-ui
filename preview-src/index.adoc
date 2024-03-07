@@ -421,6 +421,15 @@ extern fn get_block_hash_syscall(
 ) -> SyscallResult<felt252> implicits(GasBuiltin, System) nopanic;
 ----
 
+== `code_heading_2`
+
+Blah blah
+
+== `code_heading_3`
+
+Blah blah
+
+
 == Fin
 
 That's all, folks!

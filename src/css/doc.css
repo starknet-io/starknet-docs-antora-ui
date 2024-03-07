@@ -147,6 +147,8 @@
 }
 
 .doc p code,
+.doc h2 code,
+.doc h3 code,
 .doc thead code,
 .doc .colist > table code {
   color: var(--code-font-color);
