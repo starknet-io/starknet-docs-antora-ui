@@ -11,6 +11,9 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   .last-edit, .contributors {
+    font-family: Inter, sans-serif;
+    font-size: .83333rem;
+    color: #6b7280;
     display: flex;
     align-items: center;
   }
@@ -24,6 +27,7 @@
   }
   .contributors {
     margin-left: 10px;
+    border-radius: 0.5rem;
   }
   .contributors-dialog {
     display: none;
@@ -33,6 +37,7 @@
     transform: translate(-50%, -50%);
     background: white;
     border: 1px solid #ccc;
+    border-radius: 0.5rem;
     padding: 20px;
     z-index: 1000;
     max-height: 80vh;
@@ -45,6 +50,16 @@
     max-height: 60vh;
     overflow-y: auto;
     padding-right: 10px;
+  }
+  .contributor-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+  }
+  .contributor-item img {
+    margin-right: 10px;
+    vertical-align: middle;
   }
   .dialog-overlay {
     display: none;
@@ -59,6 +74,9 @@
   .dialog-overlay.active {
     display: block;
   }
+  .contributors-button {
+    border-radius: 0.5rem;
+  }
 </style>
 
 <div class="page-meta-container">
@@ -67,7 +85,7 @@
       <span id="last-edit-info" class="last-edit-info">Last edit</span>
     </div>
     <div class="contributors">
-      <button id="show-contributors">All contributors</button>
+      <button id="show-contributors" class="contributors-button">All contributors</button>
     </div>
   </div>
 </div>
@@ -76,7 +94,7 @@
 <div class="contributors-dialog" id="contributors-dialog">
   <h2>Contributors</h2>
   <div id="contributors-list" class="contributors-list"></div>
-  <button id="close-dialog">Close</button>
+  <button id="close-dialog" class="contributors-button">Close</button>
 </div>
 
 <script>
@@ -122,6 +140,9 @@
       if (allCommits) {
         // Extract unique contributors from commits
         const contributors = allCommits.reduce((uniqueContributors, commit) => {
+          if (commit.author == null) {
+            return uniqueContributors;
+          }
           const contributor = {
             login: commit.author.login,
             avatarUrl: commit.author.avatar_url,
@@ -138,7 +159,7 @@
 
         contributors.forEach(contributor => {
           const div = document.createElement('div');
-          div.className = 'contributor';
+          div.className = 'contributor-item';
           div.innerHTML = `
             <img src="${contributor.avatarUrl}" alt="${contributor.login}" width="32" height="32">
             <a href="${contributor.htmlUrl}" target="_blank">${contributor.login}</a>
