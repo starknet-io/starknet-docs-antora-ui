@@ -1,0 +1,77 @@
+/*--bg-banner: #0C0C4F;*/
+
+div.background {
+background-color: #A4A4EA;
+}
+
+.top-announcement-bar {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 6px;
+    padding: 6px 6px;
+    background-color: #A4A4EA;
+/*    background-color: var(--bg-banner); */
+    margin: auto;
+/*    margin: auto;*/
+    width: 50%;
+}
+
+.d-flex {
+    display: flex;
+}
+
+p.announcement-bar-title {
+/*    color: var(--text-primary-inverted); */
+    color: #0C0C4FFF;
+    text-align: center;
+    margin: 6px;
+/*    margin-left: auto;*/
+}
+
+.body-xsmall-strong {
+    font: 600 14px/1.5 "Inter", sans-serif;
+/*    font: 600 14px/1.5 var(--font-Inter);*/
+}
+
+a.announcement-bar-cta {
+    padding: 6px 16px;
+/*    color: var(--text-primary); */
+    color: #FFFFFF;
+/*    background-color: var(--surface-card); */
+    background-color: #1B1B1B;
+    border-radius: 8px;
+    text-align: center;
+}
+
+button.top-ann-bar-close {
+    background: none;
+    margin-left: auto;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"], a.button, a.wp-block-button__link:not(.has-background) {
+    color: #ffffff;
+}
+
+a, button, input {
+    transition: color .1s ease-in-out,background-color .1s ease-in-out;
+}
+
+button, input[type=button], input[type=reset], input[type=submit] {
+    border: 1px solid transparent;
+    cursor: pointer;
+    -webkit-appearance: button;
+    padding: 10px 20px;
+}
+
+body, button, input, select, textarea {
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-weight: 400;
+    text-transform: none;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+}
