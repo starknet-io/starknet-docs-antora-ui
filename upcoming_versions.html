@@ -218,6 +218,195 @@
 </aside>
 <article class="doc">
 <h1 class="page">StarkNet Alpha v0.11.0</h1>
+<style>
+  .page-meta-container {
+    position: relative;
+  }
+  .page-meta {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .last-edit, .contributors {
+    font-family: Inter, sans-serif;
+    font-size: .83333rem;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+  }
+  .last-edit-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .last-edit-info img {
+    margin-right: 8px;
+  }
+  .contributors {
+    margin-left: 10px;
+    border-radius: 0.5rem;
+  }
+  .contributors-dialog {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    padding: 20px;
+    z-index: 1000;
+    max-height: 80vh;
+    overflow: hidden;
+  }
+  .contributors-dialog.active {
+    display: block;
+  }
+  .contributors-list {
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 10px;
+  }
+  .contributor-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+  }
+  .contributor-item img {
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  .dialog-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  .dialog-overlay.active {
+    display: block;
+  }
+  .contributors-button {
+    border-radius: 0.5rem;
+  }
+</style>
+
+<div class="page-meta-container">
+  <div class="page-meta">
+    <div class="last-edit">
+      <span id="last-edit-info" class="last-edit-info">Last edit</span>
+    </div>
+    <div class="contributors">
+      <button id="show-contributors" class="contributors-button">All contributors</button>
+    </div>
+  </div>
+</div>
+
+<div class="dialog-overlay" id="overlay"></div>
+<div class="contributors-dialog" id="contributors-dialog">
+  <h2>Contributors</h2>
+  <div id="contributors-list" class="contributors-list"></div>
+  <button id="close-dialog" class="contributors-button">Close</button>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', async function() {
+    // Extract repo and path information from editUrl
+    const editUrl = 'http://example.com/project-xyz/blob/main/index.adoc';
+    const urlParts = editUrl.split('/');
+    const repoOwner = urlParts[3];
+    const repoName = urlParts[4];
+    const filePath = urlParts.slice(7).join('/');
+
+    // Fetch commit information
+    async function fetchAllCommits() {
+      const commitsUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/commits?path=${filePath}`;
+      const headers = new Headers();
+      const response = await fetch(commitsUrl, { headers: headers });
+      const commits = await response.json();
+      if (commits.length > 0) {
+        return commits;
+      }
+      return null;
+    }
+
+    const allCommits = await fetchAllCommits();
+    if (allCommits) {
+      const lastCommit = allCommits[0];
+      const author = lastCommit.commit.author;
+      const authorUrl = lastCommit.author.html_url;
+      const avatarUrl = lastCommit.author.avatar_url;
+      const login = lastCommit.author.login;
+
+      const lastEditInfo = document.getElementById('last-edit-info');
+      lastEditInfo.innerHTML = `
+        <img src="${avatarUrl}" alt="${login}" width="32" height="32">
+        <span>Last edit:</span>
+        <a href="${authorUrl}" target="_blank">&nbsp;@${login}&nbsp;</a>
+        <span>${new Date(author.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+      `;
+    }
+
+    // Fetch contributors list and show in dialog
+    document.getElementById('show-contributors').addEventListener('click', async function() {
+      if (allCommits) {
+        // Extract unique contributors from commits
+        const contributors = allCommits.reduce((uniqueContributors, commit) => {
+          if (commit.author == null) {
+            return uniqueContributors;
+          }
+          const contributor = {
+            login: commit.author.login,
+            avatarUrl: commit.author.avatar_url,
+            htmlUrl: commit.author.html_url
+          };
+          if (!uniqueContributors.some(c => c.login === contributor.login)) {
+            uniqueContributors.push(contributor);
+          }
+          return uniqueContributors;
+        }, []);
+
+        const list = document.getElementById('contributors-list');
+        list.innerHTML = '';
+
+        contributors.forEach(contributor => {
+          const div = document.createElement('div');
+          div.className = 'contributor-item';
+          div.innerHTML = `
+            <img src="${contributor.avatarUrl}" alt="${contributor.login}" width="32" height="32">
+            <a href="${contributor.htmlUrl}" target="_blank">${contributor.login}</a>
+          `;
+          list.appendChild(div);
+        });
+      }
+
+      // Show the dialog
+      document.getElementById('contributors-dialog').classList.add('active');
+      document.getElementById('overlay').classList.add('active');
+    });
+
+    // Close dialog
+    document.getElementById('close-dialog').addEventListener('click', function() {
+      document.getElementById('contributors-dialog').classList.remove('active');
+      document.getElementById('overlay').classList.remove('active');
+    });
+
+    // Close dialog on overlay click
+    document.getElementById('overlay').addEventListener('click', function() {
+      document.getElementById('contributors-dialog').classList.remove('active');
+      document.getElementById('overlay').classList.remove('active');
+    });
+  });
+</script>
+
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
