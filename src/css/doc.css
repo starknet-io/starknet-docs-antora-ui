@@ -1,7 +1,7 @@
 .doc {
   color: var(--doc-font-color);
   font-size: var(--doc-font-size);
-  hyphens: auto;
+  hyphens: none;
   line-height: var(--doc-line-height);
   margin: var(--doc-margin);
   max-width: var(--doc-max-width);
@@ -246,6 +246,11 @@
   table-layout: fixed;
   width: 100%;
   word-wrap: break-word;
+}
+
+.hdlist tr {
+  border-bottom: 1px solid;
+  border-color: var(--primary-border);
 }
 
 .doc table.tableblock + * {
@@ -1014,10 +1019,12 @@
 .doc td.hdlist1 {
   font-weight: var(--body-font-weight-bold);
   padding-right: 0.25rem;
+  padding-bottom: 0.5rem;
 }
 
 .doc td.hdlist2 {
   padding-left: 0.25rem;
+  padding-bottom: 0.5rem;
 }
 
 .doc .colist {
