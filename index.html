@@ -220,195 +220,700 @@
 </aside>
 <article class="doc">
 <h1 class="page">Hardware and Software Requirements</h1>
-<style>
-  .page-meta-container {
-    position: relative;
-  }
-  .page-meta {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: #fff;
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  .last-edit, .contributors {
-    font-family: Inter, sans-serif;
-    font-size: .83333rem;
-    color: #6b7280;
-    display: flex;
-    align-items: center;
-  }
-  .last-edit-info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .last-edit-info img {
-    margin-right: 8px;
-  }
-  .contributors {
-    margin-left: 10px;
-    border-radius: 0.5rem;
-  }
-  .contributors-dialog {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
-    padding: 20px;
-    z-index: 1000;
-    max-height: 80vh;
-    overflow: hidden;
-  }
-  .contributors-dialog.active {
-    display: block;
-  }
-  .contributors-list {
-    max-height: 60vh;
-    overflow-y: auto;
-    padding-right: 10px;
-  }
-  .contributor-item {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 10px;
-  }
-  .contributor-item img {
-    margin-right: 10px;
-    vertical-align: middle;
-  }
-  .dialog-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-  }
-  .dialog-overlay.active {
-    display: block;
-  }
-  .contributors-button {
-    border-radius: 0.5rem;
-  }
-</style>
-
-<div class="page-meta-container">
-  <div class="page-meta">
-    <div class="last-edit">
-      <span id="last-edit-info" class="last-edit-info">Last edit</span>
-    </div>
-    <div class="contributors">
-      <button id="show-contributors" class="contributors-button">All contributors</button>
-    </div>
-  </div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image right"><img src="multirepo-ssg.svg" alt="Multirepo SSG" width="200" height="150"></span>
+Platonem complectitur mediocritatem ea eos.
+Ei nonumy deseruisse ius.
+Mel id omnes verear.
+Vis no velit audiam, sonet <a href="#dependencies">praesent</a> eum ne.
+<strong>Prompta eripuit</strong> nec ad.
+Integer diam enim, dignissim eget eros et, ultricies mattis odio.
+Vestibulum consectetur nec urna a luctus.
+Quisque pharetra tristique arcu fringilla dapibus.
+<a href="https://example.org" class="unresolved">Curabitur</a> ut massa aliquam, cursus enim et, accumsan lectus.</p>
 </div>
-
-<div class="dialog-overlay" id="overlay"></div>
-<div class="contributors-dialog" id="contributors-dialog">
-  <h2>Contributors</h2>
-  <div id="contributors-list" class="contributors-list"></div>
-  <button id="close-dialog" class="contributors-button">Close</button>
 </div>
+</div>
+<div class="sect1">
+<h2 id="cu-solet"><a class="anchor" href="#cu-solet"></a>Cu solet</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Nominavi luptatum eos, an vim hinc philosophia intellegebat.
+Lorem pertinacia <code>expetenda</code> et nec, <span class="underline">wisi</span> illud <span class="line-through">sonet</span> qui ea.
+H<sub>2</sub>0.
+E = mc<sup>2</sup>.
+Eum an doctus <a href="#liber-recusabo">maiestatis efficiantur</a>.
+Eu mea inani iriure.<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "name": "module-name",
+  "version": "10.0.1",
+  "description": "An example module to illustrate the usage of package.json",
+  "author": "Author Name &lt;author@example.com&gt;",
+  "scripts": {
+    "test": "mocha",
+    "lint": "eslint"
+  }
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example paragraph syntax</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">.Optional title
+[example]
+This is an example paragraph.</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Optional title</div>
+<div class="content">
+This is an example paragraph.
+</div>
+</div>
+<details>
+<summary class="title">Summary <strong>Spoiler Alert!</strong></summary>
+<div class="content">
+<div class="paragraph">
+<p>Details.</p>
+</div>
+<div class="paragraph">
+<p>Loads of details.</p>
+</div>
+</div>
+</details>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">Voila!</code></pre>
+</div>
+</div>
+<details class="result">
+<summary class="title">Result</summary>
+<div class="content">
+<div class="paragraph">
+<p>Voila!</p>
+</div>
+</div>
+</details>
+<div class="sect2">
+<h3 id="some-code"><a class="anchor" href="#some-code"></a>Some Code</h3>
+<div class="paragraph">
+<p>How about some code?</p>
+</div>
+<div class="listingblock">
+<div class="title">Cairo code</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cairo hljs" data-lang="cairo">#[cfg(test)]
+mod tests {
+    #[test]
+    fn it_works() {
+        let result = 2 + 2;
+        assert!(result == 4, "result is not 4");
+    }
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Solidity code</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-solidity hljs" data-lang="solidity">// SPDX-License-Identifier: GPL-3.0
+pragma solidity &gt;=0.5.0 &lt;0.9.0;
 
-<script>
-  document.addEventListener('DOMContentLoaded', async function() {
-    // Extract repo and path information from editUrl
-    const editUrl = 'http://example.com/project-xyz/blob/main/index.adoc';
-    const urlParts = editUrl.split('/');
-    const repoOwner = urlParts[3];
-    const repoName = urlParts[4];
-    const filePath = urlParts.slice(7).join('/');
+library Balances {
+    function move(mapping(address =&gt; uint256) storage balances, address from, address to, uint amount) internal {
+        require(balances[from] &gt;= amount);
+        require(balances[to] + amount &gt;= balances[to]);
+        balances[from] -= amount;
+        balances[to] += amount;
+    }
+}
 
-    // Fetch commit information
-    async function fetchAllCommits() {
-      const commitsUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/commits?path=${filePath}`;
-      const headers = new Headers();
-      const response = await fetch(commitsUrl, { headers: headers });
-      const commits = await response.json();
-      if (commits.length > 0) {
-        return commits;
-      }
-      return null;
+contract Token {
+    mapping(address =&gt; uint256) balances;
+    using Balances for *;
+    mapping(address =&gt; mapping(address =&gt; uint256)) allowed;
+
+    event Transfer(address from, address to, uint amount);
+    event Approval(address owner, address spender, uint amount);
+
+    function transfer(address to, uint amount) external returns (bool success) {
+        balances.move(msg.sender, to, amount);
+        emit Transfer(msg.sender, to, amount);
+        return true;
+
     }
 
-    const allCommits = await fetchAllCommits();
-    if (allCommits) {
-      const lastCommit = allCommits[0];
-      const author = lastCommit.commit.author;
-      const authorUrl = lastCommit.author.html_url;
-      const avatarUrl = lastCommit.author.avatar_url;
-      const login = lastCommit.author.login;
-
-      const lastEditInfo = document.getElementById('last-edit-info');
-      lastEditInfo.innerHTML = `
-        <img src="${avatarUrl}" alt="${login}" width="32" height="32">
-        <span>Last edit:</span>
-        <a href="${authorUrl}" target="_blank">&nbsp;@${login}&nbsp;</a>
-        <span>${new Date(author.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-      `;
+    function transferFrom(address from, address to, uint amount) external returns (bool success) {
+        require(allowed[from][msg.sender] &gt;= amount);
+        allowed[from][msg.sender] -= amount;
+        balances.move(from, to, amount);
+        emit Transfer(from, to, amount);
+        return true;
     }
 
-    // Fetch contributors list and show in dialog
-    document.getElementById('show-contributors').addEventListener('click', async function() {
-      if (allCommits) {
-        // Extract unique contributors from commits
-        const contributors = allCommits.reduce((uniqueContributors, commit) => {
-          if (commit.author == null) {
-            return uniqueContributors;
-          }
-          const contributor = {
-            login: commit.author.login,
-            avatarUrl: commit.author.avatar_url,
-            htmlUrl: commit.author.html_url
-          };
-          if (!uniqueContributors.some(c => c.login === contributor.login)) {
-            uniqueContributors.push(contributor);
-          }
-          return uniqueContributors;
-        }, []);
+    function approve(address spender, uint tokens) external returns (bool success) {
+        require(allowed[msg.sender][spender] == 0, "");
+        allowed[msg.sender][spender] = tokens;
+        emit Approval(msg.sender, spender, tokens);
+        return true;
+    }
 
-        const list = document.getElementById('contributors-list');
-        list.innerHTML = '';
+    function balanceOf(address tokenOwner) external view returns (uint balance) {
+        return balances[tokenOwner];
+    }
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">JavaScript code</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">vfs
+  .src('js/vendor/*.js', { cwd: 'src', cwdbase: true, read: false })
+  .pipe(tap((file) =&gt; { <i class="conum" data-value="1"></i><b>(1)</b>
+    file.contents = browserify(file.relative, { basedir: 'src', detectGlobals: false }).bundle()
+  }))
+  .pipe(buffer()) <i class="conum" data-value="2"></i><b>(2)</b>
+  .pipe(uglify())
+  .pipe(gulp.dest('build'))</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The <code>tap</code> function is used to wiretap the data in the pipe.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Wrap each streaming file in a buffer so the files can be processed by uglify.
+Uglify can only work with buffers, not streams.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Execute these commands to validate and build your site:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ podman run -v $PWD:/antora:Z --rm -t antora/antora \
+  version
+3.0.0
+$ podman run -v $PWD:/antora:Z --rm -it antora/antora \
+  --clean \
+  antora-playbook.yml</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Cum dicat <mark>putant</mark> ne.
+Est in <a href="#inline">reque</a> homero principes, meis deleniti mediocrem ad has.
+Altera atomorum his ex, has cu elitr melius propriae.
+Eos suscipit scaevola at.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>pom.xml
+src/
+  main/
+    java/
+      HelloWorld.java
+  test/
+    java/
+      HelloWorldTest.java</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Eu mea munere vituperata constituam.</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Input</th>
+<th class="tableblock halign-left valign-top">Output</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"foo\nbar"</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>foo
+bar</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-ruby hljs" data-lang="ruby">puts "foo\nbar"</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Select <span class="menuseq"><b class="menu">File</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Open Project</b></span> to open the project in your IDE.
+Per ea <b class="button">Cancel</b> inimicus.
+Ferri <kbd>F11</kbd> tacimates constituam sed ex, eu mea munere vituperata <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>T</kbd></span> constituam.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Sidebar Title</div>
+<div class="paragraph">
+<p>Platonem complectitur mediocritatem ea eos.
+Ei nonumy deseruisse ius.
+Mel id omnes verear.</p>
+</div>
+<div class="paragraph">
+<p>Altera atomorum his ex, has cu elitr melius propriae.
+Eos suscipit scaevola at.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2 rolename">
+<h3 id="liber-recusabo"><a class="anchor" href="#liber-recusabo"></a>Liber recusabo</h3>
+<div class="paragraph">
+<p>No sea, at invenire voluptaria mnesarchum has.
+Ex nam suas nemore dignissim, vel apeirian democritum et.
+At ornatus splendide sed, phaedrum omittantur usu an, vix an noster voluptatibus.</p>
+</div>
+<div class="olist upperalpha">
+<ol class="upperalpha" type="A">
+<li>
+<p>potenti donec cubilia tincidunt</p>
+</li>
+<li>
+<p>etiam pulvinar inceptos velit quisque aptent himenaeos</p>
+</li>
+<li>
+<p>lacus volutpat semper porttitor aliquet ornare primis nulla enim</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Natum facilisis theophrastus an duo.
+No sea, at invenire voluptaria mnesarchum has.</p>
+</div>
+<div class="ulist square">
+<ul class="square">
+<li>
+<p>ultricies sociosqu tristique integer</p>
+</li>
+<li>
+<p>lacus volutpat semper porttitor aliquet ornare primis nulla enim</p>
+</li>
+<li>
+<p>etiam pulvinar inceptos velit quisque aptent himenaeos</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Eu sed antiopam gloriatur.
+Ea mea agam graeci philosophia.</p>
+</div>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-square-o"></i> todo</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> done!</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Vis veri graeci legimus ad.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">sed</dt>
+<dd>
+<p>splendide sed</p>
+</dd>
+<dt class="hdlist1">mea</dt>
+<dd>
+<p>agam graeci</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s look at that another way.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+sed
+</td>
+<td class="hdlist2">
+<p>splendide sed</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+mea
+</td>
+<td class="hdlist2">
+<p>agam graeci</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>At ornatus splendide sed.</p>
+</div>
+<table id="dependencies" class="tableblock frame-all grid-all stripes-hover fit-content">
+<caption class="title">Library dependencies</caption>
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Library</th>
+<th class="tableblock halign-left valign-top">Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eslint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">^1.7.3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eslint-config-gulp</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">^2.0.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">expect</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">^1.20.2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">istanbul</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">^0.4.3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">istanbul-coveralls</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">^1.0.3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jscs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">^2.3.5</p></td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Total</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+</tr>
+</tfoot>
+</table>
+<div class="paragraph">
+<p>Cum dicat putant ne.
+Est in reque homero principes, meis deleniti mediocrem ad has.
+Altera atomorum his ex, has cu elitr melius propriae.
+Eos suscipit scaevola at.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+This oughta do it!
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Cum dicat putant ne.
+Est in reque homero principes, meis deleniti mediocrem ad has.
+Altera atomorum his ex, has cu elitr melius propriae.
+Eos suscipit scaevola at.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You&#8217;ve been down <em>this</em> road before.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Cum dicat putant ne.
+Est in reque homero principes, meis deleniti mediocrem ad has.
+Altera atomorum his ex, has cu elitr melius propriae.
+Eos suscipit scaevola at.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Watch out!</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><span id="inline">I wouldn&#8217;t try that if I were you.</span></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Don&#8217;t forget this step!</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Key Points to Remember</div>
+<div class="paragraph">
+<p>If you installed the CLI and the default site generator globally, you can upgrade both of them with the same command.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ npm i -g @antora/cli @antora/site-generator-default</pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Nominavi luptatum eos, an vim hinc philosophia intellegebat.
+Eu mea inani iriure.</p>
+</div>
+<h2 id="voluptua-singulis" class="discrete">Voluptua singulis</h2>
+<div class="paragraph">
+<p>Cum dicat putant ne.
+Est in reque homero principes, meis deleniti mediocrem ad has.
+Ex nam suas nemore dignissim, vel apeirian democritum et.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<object type="image/svg+xml" data="multirepo-ssg.svg" width="3000"><span class="alt">Multirepo SSG</span></object>
+</div>
+<div class="title">Figure 1. Antora is a multi-repo documentation site generator</div>
+</div>
+<div class="paragraph">
+<p>Make the switch today!</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="english+中文"><a class="anchor" href="#english+中文"></a>English + 中文</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Altera atomorum his ex, has cu elitr melius propriae.
+Eos suscipit scaevola at.</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Mauris eget leo nunc, nec tempus mi? Curabitur id nisl mi, ut vulputate urna.
+Quisque porta facilisis tortor, vitae bibendum velit fringilla vitae! Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Mauris eget leo nunc, nec tempus mi? Curabitur id nisl mi, ut vulputate urna.
+Quisque porta facilisis tortor, vitae bibendum velit fringilla vitae!</p>
+</div>
+</blockquote>
+<div class="attribution">
+&#8212; Famous Person. Cum dicat putant ne.<br>
+<cite>Cum dicat putant ne. <a href="https://example.com">Famous Person Website</a></cite>
+</div>
+</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+<div class="verseblock">
+<pre class="content">The fog comes
+on little cat feet.</pre>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="dot-heading"><a class="anchor" href="#dot-heading"></a>Dot heading</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<div class="title">This is a dot heading</div>
+<p>This is a non-structural heading that you can use for the following headings:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Procedure</p>
+</li>
+<li>
+<p>Prerequisites</p>
+</li>
+<li>
+<p>Example</p>
+</li>
+</ul>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Encoding of <a href="../Smart_Contracts/class-hash.html">the class hash</a>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Encoding of the compiled class hash of the declared class.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="callouts-in-code-examples"><a class="anchor" href="#callouts-in-code-examples"></a>Callouts in code examples</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">[
+  1, <i class="conum" data-value="1"></i><b>(1)</b>
+  2019172390095051323869047481075102003731246132997057518965927979101413600827, <i class="conum" data-value="2"></i><b>(2)</b>
+  18446744073709551617, <i class="conum" data-value="3"></i><b>(3)</b>
+  100, <i class="conum" data-value="4"></i><b>(4)</b>
+  200, <i class="conum" data-value="4"></i><b>(4)</b>
+  1, <i class="conum" data-value="5"></i><b>(5)</b>
+  1351148242645005540004162531550805076995747746087542030095186557536641755046, <i class="conum" data-value="6"></i><b>(6)</b>
+  558404273560404778508455254030458021013656352466216690688595011803280448032 <i class="conum" data-value="7"></i><b>(7)</b>
+smile <i class="conum" data-value="8"></i><b>(8)</b>
+]</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The first element, <code>1</code>, is the number of contracts whose state was updated.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The second element, <code>2019172390095051323869047481075102003731246132997057518965927979101413600827</code>, is the address of the first, and only, contract whose state changed.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>The third element, <code>18446744073709551617</code>, which is 2<sup>64</sup>+1, encodes the following:
+<div class="ulist">
+<ul>
+<li>
+<p>The class information flag is <code>0</code>, that is, the contract was not deployed or replaced just now, so you shouldn&#8217;t treat the next word as the class hash.</p>
+</li>
+<li>
+<p>The new nonce is <code>1</code>.</p>
+</li>
+<li>
+<p>One storage cell was updated.</p>
+</li>
+</ul>
+</div></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>The next two elements, <code>100</code> and <code>200</code>, encode the storage update, where the value of key <code>100</code> is set to <code>200</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>the new declare section: <code>1</code> includes a single <a href="Network_Architecture/transactions.html#declare_v2">declare v2</a> transaction in this state update.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>text</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="system-call"><a class="anchor" href="#system-call"></a>System call</h2>
+<div class="sectionbody">
 
-        contributors.forEach(contributor => {
-          const div = document.createElement('div');
-          div.className = 'contributor-item';
-          div.innerHTML = `
-            <img src="${contributor.avatarUrl}" alt="${contributor.login}" width="32" height="32">
-            <a href="${contributor.htmlUrl}" target="_blank">${contributor.login}</a>
-          `;
-          list.appendChild(div);
-        });
-      }
-
-      // Show the dialog
-      document.getElementById('contributors-dialog').classList.add('active');
-      document.getElementById('overlay').classList.add('active');
-    });
-
-    // Close dialog
-    document.getElementById('close-dialog').addEventListener('click', function() {
-      document.getElementById('contributors-dialog').classList.remove('active');
-      document.getElementById('overlay').classList.remove('active');
-    });
-
-    // Close dialog on overlay click
-    document.getElementById('overlay').addEventListener('click', function() {
-      document.getElementById('contributors-dialog').classList.remove('active');
-      document.getElementById('overlay').classList.remove('active');
-    });
-  });
-</script>
-
+</div>
+</div>
+<div class="sect1">
+<h2 id="get_block_hash"><a class="anchor" href="#get_block_hash"></a><code>get_block_hash</code></h2>
+<div class="sectionbody">
+<h3 id="syntax" class="discrete">Syntax</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cairo hljs" data-lang="cairo">extern fn get_block_hash_syscall(
+    block_number: u64
+) -&gt; SyscallResult&lt;felt252&gt; implicits(GasBuiltin, System) nopanic;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="code_heading_2"><a class="anchor" href="#code_heading_2"></a><code>code_heading_2</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Blah blah</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="code_heading_3"><a class="anchor" href="#code_heading_3"></a><code>code_heading_3</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Blah blah</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="fin"><a class="anchor" href="#fin"></a>Fin</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>That&#8217;s all, folks!</p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. Quisque porta facilisis tortor, vitae bibendum velit fringilla vitae! Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</div>
+</div>
 <nav class="pagination">
   <span class="prev"><a href="#">Quickstart</a></span>
   <span class="next"><a href="#">Liber Recusabo</a></span>

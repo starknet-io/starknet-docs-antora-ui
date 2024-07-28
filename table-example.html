@@ -218,195 +218,217 @@
 </aside>
 <article class="doc">
 <h1 class="page">Block structure</h1>
-<style>
-  .page-meta-container {
-    position: relative;
-  }
-  .page-meta {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: #fff;
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  .last-edit, .contributors {
-    font-family: Inter, sans-serif;
-    font-size: .83333rem;
-    color: #6b7280;
-    display: flex;
-    align-items: center;
-  }
-  .last-edit-info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .last-edit-info img {
-    margin-right: 8px;
-  }
-  .contributors {
-    margin-left: 10px;
-    border-radius: 0.5rem;
-  }
-  .contributors-dialog {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
-    padding: 20px;
-    z-index: 1000;
-    max-height: 80vh;
-    overflow: hidden;
-  }
-  .contributors-dialog.active {
-    display: block;
-  }
-  .contributors-list {
-    max-height: 60vh;
-    overflow-y: auto;
-    padding-right: 10px;
-  }
-  .contributor-item {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 10px;
-  }
-  .contributor-item img {
-    margin-right: 10px;
-    vertical-align: middle;
-  }
-  .dialog-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-  }
-  .dialog-overlay.active {
-    display: block;
-  }
-  .contributors-button {
-    border-radius: 0.5rem;
-  }
-</style>
-
-<div class="page-meta-container">
-  <div class="page-meta">
-    <div class="last-edit">
-      <span id="last-edit-info" class="last-edit-info">Last edit</span>
-    </div>
-    <div class="contributors">
-      <button id="show-contributors" class="contributors-button">All contributors</button>
-    </div>
-  </div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>In StarkNet, the block is defined as a list of transactions and a block header.</p>
 </div>
-
-<div class="dialog-overlay" id="overlay"></div>
-<div class="contributors-dialog" id="contributors-dialog">
-  <h2>Contributors</h2>
-  <div id="contributors-list" class="contributors-list"></div>
-  <button id="close-dialog" class="contributors-button">Close</button>
 </div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', async function() {
-    // Extract repo and path information from editUrl
-    const editUrl = 'http://example.com/project-xyz/blob/main/index.adoc';
-    const urlParts = editUrl.split('/');
-    const repoOwner = urlParts[3];
-    const repoName = urlParts[4];
-    const filePath = urlParts.slice(7).join('/');
-
-    // Fetch commit information
-    async function fetchAllCommits() {
-      const commitsUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/commits?path=${filePath}`;
-      const headers = new Headers();
-      const response = await fetch(commitsUrl, { headers: headers });
-      const commits = await response.json();
-      if (commits.length > 0) {
-        return commits;
-      }
-      return null;
-    }
-
-    const allCommits = await fetchAllCommits();
-    if (allCommits) {
-      const lastCommit = allCommits[0];
-      const author = lastCommit.commit.author;
-      const authorUrl = lastCommit.author.html_url;
-      const avatarUrl = lastCommit.author.avatar_url;
-      const login = lastCommit.author.login;
-
-      const lastEditInfo = document.getElementById('last-edit-info');
-      lastEditInfo.innerHTML = `
-        <img src="${avatarUrl}" alt="${login}" width="32" height="32">
-        <span>Last edit:</span>
-        <a href="${authorUrl}" target="_blank">&nbsp;@${login}&nbsp;</a>
-        <span>${new Date(author.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-      `;
-    }
-
-    // Fetch contributors list and show in dialog
-    document.getElementById('show-contributors').addEventListener('click', async function() {
-      if (allCommits) {
-        // Extract unique contributors from commits
-        const contributors = allCommits.reduce((uniqueContributors, commit) => {
-          if (commit.author == null) {
-            return uniqueContributors;
-          }
-          const contributor = {
-            login: commit.author.login,
-            avatarUrl: commit.author.avatar_url,
-            htmlUrl: commit.author.html_url
-          };
-          if (!uniqueContributors.some(c => c.login === contributor.login)) {
-            uniqueContributors.push(contributor);
-          }
-          return uniqueContributors;
-        }, []);
-
-        const list = document.getElementById('contributors-list');
-        list.innerHTML = '';
-
-        contributors.forEach(contributor => {
-          const div = document.createElement('div');
-          div.className = 'contributor-item';
-          div.innerHTML = `
-            <img src="${contributor.avatarUrl}" alt="${contributor.login}" width="32" height="32">
-            <a href="${contributor.htmlUrl}" target="_blank">${contributor.login}</a>
-          `;
-          list.appendChild(div);
-        });
-      }
-
-      // Show the dialog
-      document.getElementById('contributors-dialog').classList.add('active');
-      document.getElementById('overlay').classList.add('active');
-    });
-
-    // Close dialog
-    document.getElementById('close-dialog').addEventListener('click', function() {
-      document.getElementById('contributors-dialog').classList.remove('active');
-      document.getElementById('overlay').classList.remove('active');
-    });
-
-    // Close dialog on overlay click
-    document.getElementById('overlay').addEventListener('click', function() {
-      document.getElementById('contributors-dialog').classList.remove('active');
-      document.getElementById('overlay').classList.remove('active');
-    });
-  });
-</script>
-
+</div>
+<div class="sect1">
+<h2 id="description-list"><a class="anchor" href="#description-list"></a>Description list</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is a description list presented as a two column list, with the role <code>stripes-odd</code> to produce table stripes on every odd row:</p>
+</div>
+<div class="hdlist stripes-odd">
+<table>
+<colgroup>
+<col style="width: 40%;">
+<col>
+</colgroup>
+<tr>
+<td class="hdlist1">
+<code>address <em>token</em></code>
+</td>
+<td class="hdlist2">
+<p>The address of the contract for the desired token.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+<code>uint256 <em>amount</em></code>
+</td>
+<td class="hdlist2">
+<p>The amount of the deposit.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+<code>uint256 <em>l2Recipient</em></code>
+</td>
+<td class="hdlist2">
+<p>The L2 address of the recipient.</p>
+<div class="openblock">
+<div class="content">
+<div class="hdlist stripes-even">
+<table>
+<tr>
+<td class="hdlist1">
+Nested term
+</td>
+<td class="hdlist2">
+<p>Nested definition.</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+<code>uint256 <em>nonce</em></code>
+</td>
+<td class="hdlist2">
+<p>The nonce of the deposit.</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="block_header"><a class="anchor" href="#block_header"></a>Block header</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following fields define the block header:</p>
+</div>
+<table class="tableblock frame-all grid-all stripes-odd fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Implemented</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>parent_block_hash</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>FieldElement</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The hash of this block&#8217;s parent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>block_number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Integer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The number (height) of this block</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>global_state_root</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>FieldElement</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The state <a href="../State/starknet-state.html#state-commitment">commitment</a> after this block</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sequencer_address</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>FieldElement</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The StarkNet address of the sequencer who created this block</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>block_timestamp</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Timestamp</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The time the sequencer created this block before executing transactions</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>transaction_count</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Integer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The number of transactions in a block</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>transaction_commitment</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>FieldElement</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A commitment to the transactions included in the block</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>event_count</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Integer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The number of events</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>event_commitment</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>FieldElement</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A commitment to the events produced in this block</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10003;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>protocol_version</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Integer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The version of the StarkNet protocol used when creating this block</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>extra data</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>FieldElement</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extraneous data that might be useful for running transactions</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The commitment fields <code>event_commitment</code> and <code>transaction_commitment</code> are the roots of a height 64 binary Merkle Patricia tree. The leaf at index \(i\) corresponds to the hash of the \(i'th\) event for <code>event_commitment</code> and \(h(transaction \ hash, signature)\) for <code>invoke transaction_commitment</code>. For other types of transactions, we use \(h(0,0)\).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="block_hash"><a class="anchor" href="#block_hash"></a>Block hash</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The block hash is defined as the Pedersen hash over the header&#8217;s elements.</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\begin{aligned}
+h(B)=h(&amp;\text{block_number}, \text{ global_state_root}, \text{ sequencer_address}, \text{ block_timestamp}, \\
+&amp;\text{transaction_count}, \text{ transaction_commitment}, \text{ event_count},\\
+&amp; \text{event_commitment}, 0, 0, \text{ parent_block_hash})
+\end{aligned}\]
+</div>
+</div>
+<div class="paragraph">
+<p>Where \(h\) is the <a href="../Hashing/hash-functions.html#pedersen-hash">Pedersen</a> hash.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Zeroes inside the hash computation of an object are used as placeholders, to be replaced in the future by meaningful fields.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
 </article>
   </div>
 </main>
