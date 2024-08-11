@@ -542,8 +542,8 @@ body ::-webkit-scrollbar-thumb {
     -webkit-box-shadow: none;
             box-shadow: none;
     position: sticky;
-    height: calc(100vh - 11.57639rem);
-    height: calc(var(--nav-height--desktop) - var(--footer-height));
+    height: calc(100vh - 7.38889rem);
+    height: calc(var(--nav-height--desktop));
   }
   .nav-panel-menu {
     overflow-y: auto;
