@@ -69,7 +69,7 @@
     top: calc(var(--navbar-height) + var(--toolbar-height));
     box-shadow: none;
     position: sticky;
-    height: calc(var(--nav-height--desktop) - var(--footer-height));
+    height: calc(var(--nav-height--desktop));
   }
   .nav-panel-menu {
     overflow-y: auto;
