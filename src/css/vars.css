@@ -118,13 +118,13 @@ Leaving this here for now for historical purposes. */
   --drawer-height: var(--toolbar-height);
   --footer-height: 4.1875rem;
   --body-top: var(--navbar-height);
-  --body-min-height: calc(100vh - var(--body-top));
-  --nav-height: calc(var(--body-min-height) - var(--toolbar-height));
+  --body-min-height: calc(100vh);
+  --nav-height: calc(var(--body-min-height));
   --nav-height--desktop: var(--body-min-height);
   --nav-panel-menu-height: calc(100% - var(--drawer-height));
   --nav-panel-explore-height: calc(50% + var(--drawer-height));
   --nav-width: calc(270 / var(--rem-base) * 1rem);
-  --toc-top: calc(var(--body-top) + var(--toolbar-height));
+  --toc-top: calc(var(--body-top));
   --toc-height: calc(100vh - var(--toc-top) - 2.5rem);
   --toc-width: 12rem;
   --toc-width--widescreen: 15rem;
