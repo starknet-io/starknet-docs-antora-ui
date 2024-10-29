@@ -57,7 +57,7 @@
 
 .toolbar {
   background-color: var(--color-zodiac-blue);
-  border-top: 1px solid var(--divider-line-color);
+  /* border-top: 1px solid var(--divider-line-color); */
 }
 
 .theme-toggle {
@@ -161,7 +161,7 @@ footer.footer {
 }
 
 .components-versions {
-  border-right: 1px solid var(--divider-line-color);
+  border-right: none;
 }
 
 #toc {

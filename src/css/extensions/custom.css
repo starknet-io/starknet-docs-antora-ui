@@ -112,6 +112,22 @@
   .edit-this-page {
     display: flex;
   }
+  
+  .share-feedback a {
+    color: var(--toc-heading-font-color);
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+
+  .share-feedback {
+    position: sticky;
+    top: calc(2rem + var(--toc-top))
+  }
+
+  .share-feedback:hover a {
+    color: var(--color-ultramarine-blue);
+    text-decoration: none;
+  }
 }
 
 .top-logo {

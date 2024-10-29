@@ -23,7 +23,7 @@
   --navbar-height: calc(88 / var(--rem-base) * 1rem);
   --nav-width: calc(324 / var(--rem-base) * 1rem);
   --body-font-family: "Inter", sans-serif;
-  --nav-height--desktop: calc(var(--body-min-height) - var(--toolbar-height));
+  --nav-height--desktop: calc(var(--body-min-height));
   --doc-font-size--desktop: calc(18 / var(--rem-base) * 1rem);
   --doc-line-height: 2;
   --heading-one-font-weight: 700;

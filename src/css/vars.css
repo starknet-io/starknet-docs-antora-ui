@@ -119,7 +119,7 @@ Leaving this here for now for historical purposes. */
   --footer-height: 4.1875rem;
   --body-top: var(--navbar-height);
   --body-min-height: calc(100vh - var(--body-top));
-  --nav-height: calc(var(--body-min-height) - var(--toolbar-height));
+  --nav-height: calc(var(--body-min-height));
   --nav-height--desktop: var(--body-min-height);
   --nav-panel-menu-height: calc(100% - var(--drawer-height));
   --nav-panel-explore-height: calc(50% + var(--drawer-height));
