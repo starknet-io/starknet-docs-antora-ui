@@ -1,7 +1,7 @@
 .breadcrumbs {
   display: none;
   flex: 1 1;
-  padding: 0 0.5rem 0 0.75rem;
+  padding-right: 0.5rem;
   line-height: var(--nav-line-height);
   color: var(--breadcrumbs-font-color);
 }
@@ -29,7 +29,7 @@ a + .breadcrumbs {
   margin: 0;
 }
 
-.breadcrumbs li::after {
+.breadcrumbs li::before {
   content: "/";
   padding: 0 0.5rem;
 }

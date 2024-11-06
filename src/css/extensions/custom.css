@@ -250,6 +250,15 @@
   vertical-align: middle;
 }
 
+.heart {
+  background-image: url(../img/heart.svg);
+  background-repeat: no-repeat;
+  height: 1rem;
+  width: 1rem;
+  padding: 0 1em;
+  vertical-align: middle;
+}
+
 .navbar-end .navbar-item .navbar-dropdown {
   padding-top: 0.8rem;
 }
