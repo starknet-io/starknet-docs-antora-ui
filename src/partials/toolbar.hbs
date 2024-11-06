@@ -1,10 +1,10 @@
 <div class="toolbar" role="navigation">
   {{!-- {{> nav-toggle}} --}}
-  <div class="components-versions desktop-only">
+  {{!-- <div class="components-versions desktop-only"> --}}
     {{!-- {{> top-components}}
     <span></span>
     {{> page-versions}} --}}
-  </div>
+  {{!-- </div> --}}
   <span></span>
   <span></span>
   {{#with site.homeUrl}}
@@ -18,6 +18,9 @@
     </div>
   {{/if}}
   <div class="edit-this-page">
-    <a href="{{page.editUrl}}"><img class="pencil">Edit this Page</a>
+    <a href="https://forms.gle/41gtSiPdUa1veHxTA" target="_blank"><img class="heart">Share feedback</a>
+  </div>
+  <div class="edit-this-page">
+    <a href="{{page.editUrl}}" target="_blank"><img class="pencil">Edit page</a>
   </div>
 </div>

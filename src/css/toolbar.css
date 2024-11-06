@@ -66,6 +66,7 @@
 @media screen and (min-width: 1024px) {
   .home-link {
     margin: calc(var(--toolbar-height) / 4);
+    margin-right: 0;
   }
   .edit-this-page {
     display: block;
