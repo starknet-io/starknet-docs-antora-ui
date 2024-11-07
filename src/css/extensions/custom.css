@@ -246,8 +246,8 @@
   background-repeat: no-repeat;
   height: 1rem;
   width: 1rem;
-  padding: 0 1em;
-  vertical-align: middle;
+  padding: 0 0.75rem;
+  vertical-align: text-bottom;
 }
 
 .heart {
@@ -256,7 +256,7 @@
   height: 1rem;
   width: 1rem;
   padding: 0 1em;
-  vertical-align: middle;
+  vertical-align: text-bottom;
 }
 
 .navbar-end .navbar-item .navbar-dropdown {
