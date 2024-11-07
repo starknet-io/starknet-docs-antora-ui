@@ -283,7 +283,7 @@
 }
 
 .edit-this-page:hover a {
-  color: var(--color-ultramarine-blue);
+  /* color: var(--color-ultramarine-blue); */
   text-decoration: none;
 }
 
