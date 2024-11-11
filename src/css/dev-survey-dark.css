@@ -5,6 +5,7 @@ background-color: #A4A4EA;
 }
 
 .top-announcement-bar {
+    display: grid;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -14,12 +15,12 @@ background-color: #A4A4EA;
 /*    background-color: var(--bg-banner); */
     margin: auto;
 /*    margin: auto;*/
-    width: 50%;
+    /* width: 50%; */
 }
 
-.d-flex {
+/* .d-flex {
     display: flex;
-}
+} */
 
 p.announcement-bar-title {
 /*    color: var(--text-primary-inverted); */
@@ -27,6 +28,11 @@ p.announcement-bar-title {
     text-align: center;
     margin: 6px;
 /*    margin-left: auto;*/
+}
+
+.body-large-strong {
+    font: 600 18px/1.5 "Inter", sans-serif;
+/*    font: 600 14px/1.5 var(--font-Inter);*/
 }
 
 .body-xsmall-strong {
@@ -42,6 +48,8 @@ a.announcement-bar-cta {
     background-color: #1B1B1B;
     border-radius: 8px;
     text-align: center;
+    margin-bottom: 6px;
+    text-decoration: none;
 }
 
 button.top-ann-bar-close {
