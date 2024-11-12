@@ -1081,6 +1081,7 @@ html.is-clipped--nav {
   .home-link {
     margin: 0.625rem;
     margin: calc(var(--toolbar-height)/4);
+    margin-right: 0
   }
   .edit-this-page {
     display: block;
@@ -1097,7 +1098,7 @@ html.is-clipped--nav {
   -webkit-box-flex: 1;
       -ms-flex: 1 1;
           flex: 1 1;
-  padding: 0 0.5rem 0 0.75rem;
+  padding-right: 0.5rem;
   line-height: 1.35;
   line-height: var(--nav-line-height);
   color: #6B7280;
@@ -1130,7 +1131,7 @@ a + .breadcrumbs {
   margin: 0;
 }
 
-.breadcrumbs li::after {
+.breadcrumbs li::before {
   content: "/";
   padding: 0 0.5rem;
 }
@@ -7760,8 +7761,17 @@ code.hljs {
   background-repeat: no-repeat;
   height: 1rem;
   width: 1rem;
+  padding: 0 0.75rem;
+  vertical-align: text-bottom;
+}
+
+.heart {
+  background-image: url(../img/heart.svg);
+  background-repeat: no-repeat;
+  height: 1rem;
+  width: 1rem;
   padding: 0 1em;
-  vertical-align: middle;
+  vertical-align: text-bottom;
 }
 
 .navbar-end .navbar-item .navbar-dropdown {
@@ -7791,8 +7801,7 @@ code.hljs {
 }
 
 .edit-this-page:hover a {
-  color: #4070f4;
-  color: var(--color-ultramarine-blue);
+  /* color: var(--color-ultramarine-blue); */
   text-decoration: none;
 }
 
