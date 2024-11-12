@@ -14,7 +14,7 @@
   }
 
   for (var i = 0; i < images.length; i++) {
-    if (!(images[i].classList.contains('copy-icon') || images[i].classList.contains('pencil') || hasParentClass(images[i],'overview-box'))){
+    if (!(images[i].classList.contains('copy-icon') || images[i].classList.contains('pencil') || images[i].classList.contains('heart') || hasParentClass(images[i],'overview-box'))){
       images[i].setAttribute('data-zoomable', 'true')
     }
   }
