@@ -87,9 +87,10 @@
 } */
 
 .pencil {
-  /*
-  background-image: url(../img/pencil-filled.svg);
-  */
+  fill: var(--color-athens-white);
+}
+
+.heart {
   fill: var(--color-athens-white);
 }
 

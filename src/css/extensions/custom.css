@@ -246,8 +246,17 @@
   background-repeat: no-repeat;
   height: 1rem;
   width: 1rem;
+  padding: 0 0.75rem;
+  vertical-align: text-bottom;
+}
+
+.heart {
+  background-image: url(../img/heart.svg);
+  background-repeat: no-repeat;
+  height: 1rem;
+  width: 1rem;
   padding: 0 1em;
-  vertical-align: middle;
+  vertical-align: text-bottom;
 }
 
 .navbar-end .navbar-item .navbar-dropdown {
@@ -274,7 +283,7 @@
 }
 
 .edit-this-page:hover a {
-  color: var(--color-ultramarine-blue);
+  /* color: var(--color-ultramarine-blue); */
   text-decoration: none;
 }
 
