@@ -331,4 +331,10 @@
       width: min(484px, 50%);
   }
 }
+
+@media screen and (max-width: 680px) {
+  .autocomplete-root {
+      display: none;
+  }
+}
   

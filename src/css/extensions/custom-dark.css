@@ -73,7 +73,7 @@
 .theme-toggle:hover {
   /* background-image: url(../img/moon-filled.svg);
   fill: var(--color-athens-white); */
-  background-color: rgb(37, 45, 59);
+  /* background-color: rgb(37, 45, 59); */
 }
 
 .nav-toggle {

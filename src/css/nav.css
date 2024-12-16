@@ -66,10 +66,10 @@
 
 @media screen and (min-width: 1024px) {
   .nav {
-    top: calc(var(--navbar-height) + var(--toolbar-height));
+    top: calc(var(--navbar-height));
     box-shadow: none;
     position: sticky;
-    height: calc(var(--nav-height--desktop));
+    height: 100vh;
   }
   .nav-panel-menu {
     overflow-y: auto;
