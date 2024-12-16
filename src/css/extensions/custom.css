@@ -246,8 +246,9 @@
   background-repeat: no-repeat;
   height: 1rem;
   width: 1rem;
-  padding: 0 0.75rem;
+  padding: 0 0.9rem;
   vertical-align: text-bottom;
+  fill: var(--toc-heading-font-color);
 }
 
 .heart {
@@ -257,6 +258,7 @@
   width: 1rem;
   padding: 0 1em;
   vertical-align: text-bottom;
+  fill: var(--toc-heading-font-color);
 }
 
 .navbar-end .navbar-item .navbar-dropdown {

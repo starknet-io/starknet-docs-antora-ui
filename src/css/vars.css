@@ -124,7 +124,7 @@ Leaving this here for now for historical purposes. */
   --nav-panel-menu-height: calc(100% - var(--drawer-height));
   --nav-panel-explore-height: calc(50% + var(--drawer-height));
   --nav-width: calc(270 / var(--rem-base) * 1rem);
-  --toc-top: calc(var(--body-top) + 3rem);
+  --toc-top: calc(var(--body-top) + 4.5rem);
   --toc-height: calc(100vh - var(--toc-top) - 2.5rem);
   --toc-width: 12rem;
   --toc-width--widescreen: 15rem;
