@@ -80,7 +80,7 @@
 .nav .panels {
   display: flex;
   flex-direction: column;
-  height: inherit;
+  height: calc(100vh - 10rem);
 }
 
 html.is-clipped--nav {

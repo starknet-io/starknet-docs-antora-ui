@@ -349,15 +349,15 @@
 }
 
 footer .footerdiv {
-  padding: 1rem 2rem;
+  padding: 0 2rem;
   display: flex;
-  flex: auto;
   justify-content: space-between;
 }
 
 footer.footer {
   display: flex;
   padding: unset;
+  justify-content: center;
 }
 
 .community_icons {
