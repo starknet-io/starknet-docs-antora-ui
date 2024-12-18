@@ -1,13 +1,17 @@
 footer.footer {
-  background-color: var(--footer-background);
+  background-color: var(--body-background);
   color: var(--footer-font-color);
-  font-size: calc(15 / var(--rem-base) * 1rem);
+  font-size: calc(12.5 / var(--rem-base) * 1rem);
   line-height: var(--footer-line-height);
   padding: 1.5rem;
 }
 
 .footer p {
   margin: 0px;
+  text-align: center;
+  border-top: 1px solid var(--divider-line-color);
+  padding-top: 1rem;
+  width: calc(var(--nav-width) * 0.75)
 }
 
 .footer a {

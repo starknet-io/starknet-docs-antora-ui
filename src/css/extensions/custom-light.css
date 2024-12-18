@@ -66,7 +66,7 @@
 
 .theme-toggle:hover {
   /* background-image: url(../img/moon-filled.svg); */
-  background-color: #f3f8fb;
+  /* background-color: #f3f8fb; */
 }
 
 .nav-toggle {
@@ -117,10 +117,6 @@
 pre {
   /* background-color: var(--color-platinum-gray); */
   padding: 0px;
-}
-
-footer.footer {
-  border-top: 1px solid var(--divider-line-color);
 }
 
 .doc details {
