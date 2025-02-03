@@ -21,7 +21,7 @@
     headingsSelector.push(headingSelector.join('>'))
   }
   var headings = find(headingsSelector.join(','), article.parentNode)
-  if (!headings.length) return sidebar.parentNode.removeChild(sidebar)
+  if (!headings.length) return
 
   var lastActiveFragment
   var links = {}
