@@ -40,7 +40,7 @@
   if (!menu) (menu = document.createElement('div')).className = 'toc-menu'
 
   var title = document.createElement('h3')
-  title.textContent = sidebar.dataset.title || 'Table of Contents'
+  title.textContent = sidebar.dataset.title || 'On this page'
   menu.appendChild(title)
   menu.appendChild(list)
 
