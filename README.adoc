@@ -10,7 +10,7 @@
 :url-nvm-install: {url-nvm}#installation
 :url-source-maps: https://developer.mozilla.org/en-US/docs/Tools/Debugger/How_to/Use_a_source_map
 
-= Starknet Docs UI
+= Starknet Docs UI repository
 
 == Prerequisites
 
