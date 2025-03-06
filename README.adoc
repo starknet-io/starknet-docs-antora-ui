@@ -12,11 +12,7 @@
 
 = Starknet Docs UI
 
-== Development Quickstart
-
-This section offers a basic tutorial to teach you how to set up the UI project, preview it locally, and bundle it for use with Antora.
-
-=== Prerequisites
+== Prerequisites
 
 To preview and bundle the UI, you need the following software on your computer:
 
@@ -24,7 +20,7 @@ To preview and bundle the UI, you need the following software on your computer:
 * {url-nodejs}[Node.js] (commands: `node` and `npm`)
 * {url-gulp}[Gulp CLI] (command: `gulp`)
 
-==== git
+=== git
 
 First, make sure you have git installed.
 
@@ -32,7 +28,7 @@ First, make sure you have git installed.
 
 If not, {url-git-dl}[download and install] the git package for your system.
 
-==== Node.js
+=== Node.js
 
 Next, make sure that you have Node.js installed (which also provides npm).
 
@@ -59,7 +55,7 @@ To make Node.js 10 the default in new terminals, type:
 
 Now that you have Node.js installed, you can proceed with installing the Gulp CLI.
 
-==== Gulp CLI
+=== Gulp CLI
 
 You'll need the Gulp command-line interface (CLI) to run the build.
 The Gulp CLI package provides the `gulp` command which, in turn, executes the version of Gulp declared by the project.
@@ -86,7 +82,7 @@ For example:
 
 Now that you have the prerequisites installed, you can fetch and build the UI project.
 
-=== Clone and Initialize the UI Project
+== Clone and Initialize the UI Project
 
 Clone the UI project using git:
 
@@ -113,7 +109,7 @@ If you prefer to install packages using Yarn, run this command instead:
  $ yarn
 ====
 
-=== Preview the UI
+== Preview the UI
 
 The UI project is configured to preview offline.
 The files in the [.path]_preview-src/_ folder provide the sample content that allows you to see the UI in action.
@@ -143,7 +139,7 @@ This works by monitoring the project for changes, running the `preview:build` ta
 
 Press kbd:[Ctrl+C] to stop the preview server and end the continuous build.
 
-=== Package for Use with Antora
+== Package for Use with Antora
 
 If you need to package the UI so you can use it to generate the documentation site locally, run the following command:
 
@@ -164,7 +160,7 @@ or
 
 The UI bundle will again be available at [.path]_build/ui-bundle.zip_.
 
-==== Source Maps
+=== Source Maps
 
 The build consolidates all the CSS and client-side JavaScript into combined files, [.path]_site.css_ and [.path]_site.js_, respectively, in order to reduce the size of the bundle.
 {url-source-maps}[Source maps] correlate these combined files with their original sources.
