@@ -179,14 +179,3 @@ If you need to include source maps in the bundle, you can do so by setting the `
  $ SOURCEMAPS=true gulp bundle
 
 In this case, the bundle will include the source maps, which can be used for debugging your production site.
-
-== Copyright and License
-
-Copyright (C) 2017-present OpenDevise Inc. and the Antora Project.
-
-Use of this software is granted under the terms of the https://www.mozilla.org/en-US/MPL/2.0/[Mozilla Public License Version 2.0] (MPL-2.0).
-See link:LICENSE[] to find the full license text.
-
-== Authors
-
-Development of Antora is led and sponsored by {url-opendevise}[OpenDevise Inc].
