@@ -12,6 +12,13 @@
 
 = Starknet Docs UI repository
 
+Welcome to the https://docs.starknet.io[Starknet Docs^] UI repository, written in https://asciidoc.org/[AsciiDoc^] and built using https://antora.org/[Antora^].
+
+[NOTE]
+====
+This repository only contains the UI of the Starknet Docs. For the content, see the https://github.com/starknet-io/starknet-docs/tree/main[Starknet Docs repository^].
+====
+
 == Prerequisites
 
 To preview and bundle the UI, you need the following software on your computer:
