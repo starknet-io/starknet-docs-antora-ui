@@ -13,12 +13,6 @@ const CONFIG = {
   RECONNECT_BASE_DELAY: 1000,
   MAX_RECONNECT_DELAY: 30000,
   HEARTBEAT_TIMEOUT: 5000,
-  WS_PARAMS: {
-    chatModel: 'Claude 3.5 Sonnet',
-    chatModelProvider: 'anthropic',
-    embeddingModel: 'Text embedding 3 large',
-    embeddingModelProvider: 'openai',
-  },
 }
 
 // Add styles for the chat window
@@ -366,10 +360,7 @@ class ChatManager {
       this.connectWebSocket()
     } catch (error) {
       console.error('Error initializing chat:', error)
-      this.showToast(
-        'Failed to initialize chat. Please try again later.',
-        'error'
-      )
+      throw new Error('Failed to initialize chat. Please try again later.')
     }
   }
 
@@ -379,7 +370,7 @@ class ChatManager {
       return await response.json()
     } catch (error) {
       console.error('Error fetching models:', error)
-      this.showToast('Failed to fetch models. Please try again later.', 'error')
+      throw new Error('Failed to fetch models. Please try again later.')
     }
   }
 
@@ -465,9 +456,9 @@ class ChatManager {
     console.warn('Heartbeat timeout - connection might be unstable')
     this.state.connectionQuality = 'poor'
     this.updateConnectionStatus()
-    // Attempt to reconnect if connection is poor
     if (this.state.chatSocket?.readyState === WebSocket.OPEN) {
       this.state.chatSocket.close()
+      this.showBreadcrumbError('Connection timeout - heartbeat failed')
     }
   }
 
@@ -544,8 +535,8 @@ class ChatManager {
 
   handleErrorMessage (data) {
     console.error('Received error message:', data.data)
-    this.showBreadcrumbError(data.data)
     this.removeLoadingIndicator()
+    throw new Error(data.data)
   }
 
   handleSourcesMessage (data) {
@@ -589,10 +580,7 @@ class ChatManager {
       this.sendMessageToServer(message)
       this.showLoadingIndicator()
     } else {
-      this.showToast(
-        'Not connected to the chat server. Please try again later.',
-        'error'
-      )
+      throw new Error('Not connected to the chat server. Please try again later.')
     }
   }
 
@@ -828,6 +816,7 @@ class ChatManager {
     if (this.state.chatSocket?.readyState === WebSocket.OPEN) {
       this.state.chatSocket.close()
     }
+    this.showBreadcrumbError('WebSocket connection error occurred')
   }
 
   setWSReady (isReady) {
@@ -850,15 +839,11 @@ class ChatManager {
       const totalDelay = delay + jitter
 
       console.log(`Reconnect attempt ${this.state.reconnectAttempts} in ${Math.round(totalDelay)}ms`)
-      this.showToast(`Connection lost. Attempting to reconnect (${this.state.reconnectAttempts}/${CONFIG.MAX_RECONNECT_ATTEMPTS})...`, 'warning')
-
+      this.showBreadcrumbError(`Connection lost. Attempting to reconnect (${this.state.reconnectAttempts}/${CONFIG.MAX_RECONNECT_ATTEMPTS})...`)
       setTimeout(() => this.connectWebSocket(), totalDelay)
     } else {
       console.error('Max reconnection attempts reached')
-      this.showToast(
-        'Failed to connect after multiple attempts. Please refresh the page.',
-        'error'
-      )
+      this.showBreadcrumbError('Failed to connect after multiple attempts. Please refresh the page.')
     }
   }
 
