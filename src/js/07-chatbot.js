@@ -108,6 +108,8 @@ style.textContent = `
     font-size: 14px;
     line-height: 1.4;
     width: fit-content;
+    overflow-x: auto;
+    max-width: 90%;
   }
 
   .message .content {
@@ -121,6 +123,10 @@ style.textContent = `
     background: rgba(0, 0, 0, 0.05);
     padding: 8px;
     border-radius: 4px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-width: 100%;
   }
 
   .message code {
@@ -128,6 +134,7 @@ style.textContent = `
     background: rgba(0, 0, 0, 0.05);
     padding: 2px 4px;
     border-radius: 3px;
+    word-break: break-all;
   }
 
   .message.user {
@@ -458,7 +465,6 @@ class ChatManager {
     this.updateConnectionStatus()
     if (this.state.chatSocket?.readyState === WebSocket.OPEN) {
       this.state.chatSocket.close()
-      this.showBreadcrumbError('Connection timeout - heartbeat failed')
     }
   }
 
@@ -594,7 +600,7 @@ class ChatManager {
         content: message,
       },
       copilot: false,
-      focusMode: 'starknetEcosystemSearch',
+      focusMode: 'docChatMode',
       history: this.state.messageHistory,
     }
 
@@ -839,11 +845,9 @@ class ChatManager {
       const totalDelay = delay + jitter
 
       console.log(`Reconnect attempt ${this.state.reconnectAttempts} in ${Math.round(totalDelay)}ms`)
-      this.showBreadcrumbError(`Connection lost. Attempting to reconnect (${this.state.reconnectAttempts}/${CONFIG.MAX_RECONNECT_ATTEMPTS})...`)
       setTimeout(() => this.connectWebSocket(), totalDelay)
     } else {
       console.error('Max reconnection attempts reached')
-      this.showBreadcrumbError('Failed to connect after multiple attempts. Please refresh the page.')
     }
   }
 
